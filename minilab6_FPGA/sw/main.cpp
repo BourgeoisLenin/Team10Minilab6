@@ -217,14 +217,14 @@ int main(int argc, char *argv[]) {
 		fprintf(stdout, "Loading A into AFU...\n");
 		for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 		{
-			send_row_A(a_r, A_vals[a_r][i*8+a_r], afu);
+			send_row_A(a_r, A_vals[a_r][BLK*8+a_r], afu);
 		}
 
 		// Push each value of B.
 		fprintf(stdout, "Loading B into AFU...\n");
 		for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 		{
-			send_row_B(b_r, B_vals[b_r][i*8+b_r], afu);
+			send_row_B(b_r, B_vals[b_r][BLK*8+b_r], afu);
 		}
 
 		// Calculate
@@ -238,7 +238,7 @@ int main(int argc, char *argv[]) {
 
 		for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 		{
-			unpack_from_C(c_r, output[c_r][i*8+c_r], afu);
+			unpack_from_C(c_r, output[c_r][BLK*8+c_r], afu);
 		}
 	}
 
