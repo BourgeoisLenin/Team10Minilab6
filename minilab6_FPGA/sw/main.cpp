@@ -252,7 +252,7 @@ int main(int argc, char *argv[]) {
 			{
 
 				unpack_from_C(c_r, output_row, afu);
-				output[BLK_r*8+c_r]
+				output[BLK_r*8+c_r];
 				for(int cnt = 0; cnt < 8; cnt++){
 					output[BLK_r*8+c_r][BLK_c*8+cnt] =output_row[cnt];
 				}
