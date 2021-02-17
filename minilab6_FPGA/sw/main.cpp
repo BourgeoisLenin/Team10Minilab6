@@ -203,9 +203,9 @@ int main(int argc, char *argv[]) {
 
 	fprintf(stdout, "Calculating reference values of C...\n");
 	// Calculate reference C values.
-	for(int y_ind = 0; y_ind < DIM; ++y_ind)
+	for(int y_ind = 0; y_ind < DIM_FULL; ++y_ind)
 	{
-		for(int x_ind = 0; x_ind < DIM; ++x_ind)
+		for(int x_ind = 0; x_ind < DIM_FULL; ++x_ind)
 		{
 			// Calculate C
 			output_reference[y_ind][x_ind] = 0;
@@ -222,10 +222,6 @@ int main(int argc, char *argv[]) {
 			// Now try it with the AFU.
 			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 
-			// loading 0s to C
-			for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
-				send_row_C(c_clear, c_zero, afu);
-			}
 
 			// Write each value of A down.
 			fprintf(stdout, "Loading A into AFU...\n");
@@ -268,6 +264,12 @@ int main(int argc, char *argv[]) {
 				//fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
 
 			}
+
+						// loading 0s to C
+			for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
+				send_row_C(c_clear, c_zero, afu);
+			}
+			
 		}
 	}
 
