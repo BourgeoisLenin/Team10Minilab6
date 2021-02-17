@@ -219,6 +219,7 @@ int main(int argc, char *argv[]) {
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM/8;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM/8;BLK_c++){
 			// Now try it with the AFU.
+			fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 
 			// loading 0s to C
 			for(ptrdiff_t c_clear = 0; c_clear < 8; c_clear++){
@@ -232,6 +233,7 @@ int main(int argc, char *argv[]) {
 				for(int cnt = 0; cnt < 8; cnt++){
 					A_row[cnt] = A_vals[BLK_r*8+a_r][BLK_c*8+cnt];
 				}
+				fprintf(stdout,"A_row here! %hx \n",A_row[0]);
 				send_row_A(a_r, A_row, afu);
 			}
 
@@ -242,6 +244,7 @@ int main(int argc, char *argv[]) {
 				for(int cnt = 0; cnt < 8; cnt++){
 					B_row[cnt] = B_vals[BLK_r*8+b_r][BLK_c*8+cnt];
 				}
+				fprintf(stdout,"B_row here! %hx \n",B_row[0]);
 				send_row_B(b_r, B_row, afu);
 			}
 
@@ -256,11 +259,14 @@ int main(int argc, char *argv[]) {
 
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-
+				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				unpack_from_C(c_r, output_row, afu);
+				//fprintf(output_row[0],"here!\n");
 				for(int cnt = 0; cnt < 8; cnt++){
 					output[BLK_r*8+c_r][BLK_c*8+cnt] = output_row[cnt];
 				}
+				fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
+
 			}
 		}
 	}
