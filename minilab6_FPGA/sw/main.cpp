@@ -53,20 +53,13 @@ using namespace std;
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
 #define DIM 8
-#define DIM_FULL 16
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
-AB_TYPE A_vals[DIM_FULL][DIM_FULL];
-AB_TYPE B_vals[DIM_FULL][DIM_FULL];
-C_TYPE output[DIM_FULL][DIM_FULL];
-C_TYPE output_reference[DIM_FULL][DIM_FULL];
-
-//NEW
-AB_TYPE A_row[DIM];
-AB_TYPE B_row[DIM];
-C_TYPE output_row[DIM];
-C_TYPE c_zero[8] = {0,0,0,0,0,0,0,0};
+AB_TYPE A_vals[DIM][DIM];
+AB_TYPE B_vals[DIM][DIM];
+C_TYPE output[DIM][DIM];
+C_TYPE output_reference[DIM][DIM];
 
 // Reflect Endian
 template<int width, class BT> BT ref_end(BT in)
@@ -191,9 +184,9 @@ int main(int argc, char *argv[]) {
 	fprintf(stdout, "FULL SYSTEM TEST\n---------------\n");
 	fprintf(stdout, "Populating A and B...\n");
 	// Generate A vals, B vals.
-	for(int y_ind = 0; y_ind < DIM_FULL; ++y_ind)
+	for(int y_ind = 0; y_ind < DIM; ++y_ind)
 	{
-		for(int x_ind = 0; x_ind < DIM_FULL; ++x_ind)
+		for(int x_ind = 0; x_ind < DIM; ++x_ind)
 		{
 			A_vals[y_ind][x_ind] = static_cast<int8_t>(rand() % 255);
 			B_vals[y_ind][x_ind] = static_cast<int8_t>(rand() % 255);
@@ -203,9 +196,9 @@ int main(int argc, char *argv[]) {
 
 	fprintf(stdout, "Calculating reference values of C...\n");
 	// Calculate reference C values.
-	for(int y_ind = 0; y_ind < DIM_FULL; ++y_ind)
+	for(int y_ind = 0; y_ind < DIM; ++y_ind)
 	{
-		for(int x_ind = 0; x_ind < DIM_FULL; ++x_ind)
+		for(int x_ind = 0; x_ind < DIM; ++x_ind)
 		{
 			// Calculate C
 			output_reference[y_ind][x_ind] = 0;
@@ -217,68 +210,41 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	for(ptrdiff_t BLK_r = 0; BLK_r<DIM_FULL/DIM;BLK_r++){
-		for(ptrdiff_t BLK_c = 0; BLK_c<DIM_FULL/DIM;BLK_c++){
-			// Now try it with the AFU.
-			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
+	// Now try it with the AFU.
 
+	// Write each value of A down.
+	fprintf(stdout, "Loading A into AFU...\n");
+	for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
+	{
+		send_row_A(a_r, A_vals[a_r], afu);
+	}
 
-			// Write each value of A down.
-			fprintf(stdout, "Loading A into AFU...\n");
-			for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
-			{
-				for(int cnt = 0; cnt < DIM; cnt++){
-					A_row[cnt] = A_vals[BLK_r*DIM+a_r][BLK_c*DIM+cnt];
-				}
-				//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
-				send_row_A(a_r, A_row, afu);
-			}
+	// Push each value of B.
+	fprintf(stdout, "Loading B into AFU...\n");
+	for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
+	{
+		send_row_B(b_r, B_vals[b_r], afu);
+	}
 
-			// Push each value of B.
-			fprintf(stdout, "Loading B into AFU...\n");
-			for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
-			{
-				for(int cnt = 0; cnt < DIM; cnt++){
-					B_row[cnt] = B_vals[BLK_r*DIM+b_r][BLK_c*DIM+cnt];
-				}
-				//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
-				send_row_B(b_r, B_row, afu);
-			}
+	// Calculate
+	fprintf(stdout, "Performing Calculation...\n");
+	afu.write(0x0400, 100);
+	// Do we have to sleep?
+//	usleep(1000*1000);
 
-			// Calculate
-			fprintf(stdout, "Performing Calculation...\n");
-			afu.write(0x0400, 100);
-			// Do we have to sleep?
-		//	usleep(1000*1000);
+	// Read Values.
+	fprintf(stdout, "Reading Output from C...\n");
 
-			// Read Values.
-			fprintf(stdout, "Reading Output from C...\n");
-
-			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
-			{
-				unpack_from_C(c_r, output_row, afu);
-				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
-				for(int cnt = 0; cnt < DIM; cnt++){
-					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
-				}
-				//fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
-
-			}
-
-						// loading 0s to C
-			for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
-				send_row_C(c_clear, c_zero, afu);
-			}
-			afu.write(0x0400, 000);
-			
-		}
+	for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
+	{
+		unpack_from_C(c_r, output[c_r], afu);
 	}
 
 	// Compare.
 	fprintf(stdout, "Calculation finished. Testing values...\n");
-	for(int r = 0; r < DIM_FULL; ++r)
+	for(int r = 0; r < DIM; ++r)
 	{
-		for(int c = 0; c < DIM_FULL; ++c)
+		for(int c = 0; c < DIM; ++c)
 		{
 			fprintf(stdout, "row: %d, col: %d | got: %hx, expected %hx", r, c, output[r][c], output_reference[r][c]);
 			fflush(stdout);
