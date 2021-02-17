@@ -53,6 +53,7 @@ using namespace std;
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
 #define DIM 8
+#define DIM_FULL 16
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
@@ -62,9 +63,9 @@ C_TYPE output[DIM][DIM];
 C_TYPE output_reference[DIM][DIM];
 
 //NEW
-AB_TYPE A_row[8];
-AB_TYPE B_row[8];
-C_TYPE output_row[8];
+AB_TYPE A_row[DIM];
+AB_TYPE B_row[DIM];
+C_TYPE output_row[DIM];
 C_TYPE c_zero[8] = {0,0,0,0,0,0,0,0};
 
 // Reflect Endian
@@ -216,38 +217,35 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	for(ptrdiff_t BLK_r = 0; BLK_r<DIM/8;BLK_r++){
-		for(ptrdiff_t BLK_c = 0; BLK_c<DIM/8;BLK_c++){
+	for(ptrdiff_t BLK_r = 0; BLK_r<DIM_FULL/DIM;BLK_r++){
+		for(ptrdiff_t BLK_c = 0; BLK_c<DIM_FULL/DIM;BLK_c++){
 			// Now try it with the AFU.
-			fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
+			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 
 			// loading 0s to C
-			for(ptrdiff_t c_clear = 0; c_clear < 8; c_clear++){
-				for (int i = 0; i < 8;i++){
-					c_zero[i] = 0;
-				}
+			for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
 				send_row_C(c_clear, c_zero, afu);
 			}
 
 			// Write each value of A down.
 			fprintf(stdout, "Loading A into AFU...\n");
-			for(ptrdiff_t a_r = 0; a_r < 8; ++a_r)
+			for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 			{
-				for(int cnt = 0; cnt < 8; cnt++){
-					A_row[cnt] = A_vals[BLK_r*8+a_r][BLK_c*8+cnt];
+				for(int cnt = 0; cnt < DIM; cnt++){
+					A_row[cnt] = A_vals[BLK_r*DIM+a_r][BLK_c*DIM+cnt];
 				}
-				fprintf(stdout,"A_row here! %hx \n",A_row[0]);
+				//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
 				send_row_A(a_r, A_row, afu);
 			}
 
 			// Push each value of B.
 			fprintf(stdout, "Loading B into AFU...\n");
-			for(ptrdiff_t b_r = 0; b_r < 8; ++b_r)
+			for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 			{
-				for(int cnt = 0; cnt < 8; cnt++){
-					B_row[cnt] = B_vals[BLK_r*8+b_r][BLK_c*8+cnt];
+				for(int cnt = 0; cnt < DIM; cnt++){
+					B_row[cnt] = B_vals[BLK_r*DIM+b_r][BLK_c*DIM+cnt];
 				}
-				fprintf(stdout,"B_row here! %hx \n",B_row[0]);
+				//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
 				send_row_B(b_r, B_row, afu);
 			}
 
@@ -260,14 +258,14 @@ int main(int argc, char *argv[]) {
 			// Read Values.
 			fprintf(stdout, "Reading Output from C...\n");
 
-			for(ptrdiff_t c_r = 0; c_r < 8; ++c_r)
+			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
 				unpack_from_C(c_r, output_row, afu);
-				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
-				for(int cnt = 0; cnt < 8; cnt++){
-					output[BLK_r*8+c_r][BLK_c*8+cnt] = output_row[cnt];
+				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
+				for(int cnt = 0; cnt < DIM; cnt++){
+					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
 				}
-				fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
+				//fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
 
 			}
 		}
