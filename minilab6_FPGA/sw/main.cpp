@@ -224,7 +224,7 @@ int main(int argc, char *argv[]) {
 			for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 			{
 				for(int cnt = 0; cnt < 8; cnt++){
-					A_row[cnt] = A_vals[BLK_r*8][BLK_c*8+cnt];
+					A_row[cnt] = A_vals[BLK_r*8+a_r][BLK_c*8+cnt];
 				}
 				send_row_A(a_r, A_row, afu);
 			}
@@ -234,7 +234,7 @@ int main(int argc, char *argv[]) {
 			for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 			{
 				for(int cnt = 0; cnt < 8; cnt++){
-					B_row[cnt] = B_vals[BLK_r*8][BLK_c*8+cnt];
+					B_row[cnt] = B_vals[BLK_r*8+b_r][BLK_c*8+cnt];
 				}
 				send_row_B(b_r, B_row, afu);
 			}
