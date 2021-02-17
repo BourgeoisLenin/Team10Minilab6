@@ -11,64 +11,64 @@ CWRITE: low word, high word, address 0 | 0 @350 @358
 CWRITE: low word, high word, address 0 | 0 @360 @368
 CWRITE: low word, high word, address 0 | 0 @370 @378
 Loading A and B into AFU...
-data word val, addr: c00b160cc66b73ad | 100
-data word val, addr: f3515f96df3960d0 | 200
-data word val, addr: a5936ea62c82c8e0 | 108
-data word val, addr: 5eaeb1c18f8f4cc9 | 208
-data word val, addr: cd896993b3eab2a | 110
-data word val, addr: 553c2d29e4582c2f | 210
-data word val, addr: 4df88d9f2646ba02 | 118
-data word val, addr: 3999f73ddf7541ed | 218
-data word val, addr: a405f6715edf0eb7 | 120
-data word val, addr: fcc46aebfeb4fd6a | 220
-data word val, addr: 543157d2f4fa0995 | 128
-data word val, addr: c6fb576c6c67f5c6 | 228
-data word val, addr: df5d20688a768623 | 130
-data word val, addr: bb7499e149fb9e8f | 230
-data word val, addr: fc2de7e319e6f6d9 | 138
-data word val, addr: 11c7c0b8ce0150ea | 238
-data word val, addr: 56b90032f5af5eca | 100
-data word val, addr: e2c068d382029d1e | 200
-data word val, addr: e6fe89c5ef4453fc | 108
-data word val, addr: 93d0aa5f6d3b98af | 208
-data word val, addr: c1e3eb627ba703c0 | 110
-data word val, addr: 81354258fcc215b1 | 210
-data word val, addr: 304b88bd0cc3be78 | 118
-data word val, addr: f12eb83115b60c2f | 218
-data word val, addr: b8d27b20001c1c95 | 120
-data word val, addr: f0be87fa4cef0e07 | 220
-data word val, addr: 86fa24a8d3989f5e | 128
-data word val, addr: 247a4dc8f9a9f6e8 | 228
-data word val, addr: e3b444d8349fb564 | 130
-data word val, addr: cafcfb0cf02b9122 | 230
-data word val, addr: a73fe81a30bc0dc6 | 138
-data word val, addr: 73bafbdf9fe72f80 | 238
-data word val, addr: f3515f96df3960d0 | 200
-data word val, addr: 5eaeb1c18f8f4cc9 | 208
-data word val, addr: 553c2d29e4582c2f | 210
-data word val, addr: 3999f73ddf7541ed | 218
-data word val, addr: fcc46aebfeb4fd6a | 220
-data word val, addr: c6fb576c6c67f5c6 | 228
-data word val, addr: bb7499e149fb9e8f | 230
-data word val, addr: 11c7c0b8ce0150ea | 238
-data word val, addr: e2c068d382029d1e | 200
-data word val, addr: 93d0aa5f6d3b98af | 208
-data word val, addr: 81354258fcc215b1 | 210
-data word val, addr: f12eb83115b60c2f | 218
-data word val, addr: f0be87fa4cef0e07 | 220
-data word val, addr: 247a4dc8f9a9f6e8 | 228
-data word val, addr: cafcfb0cf02b9122 | 230
-data word val, addr: 73bafbdf9fe72f80 | 238
+data word val, addr: 633d11e9445e1f38 | 100
+data word val, addr: ab1eb38d42e7b6c8 | 200
+data word val, addr: 5c6931f33a14a299 | 108
+data word val, addr: 7195b04b7de6782b | 208
+data word val, addr: ddef0b82a9e57c97 | 110
+data word val, addr: ac67ecdad9b7ab7e | 210
+data word val, addr: d6046fb91200b5d1 | 118
+data word val, addr: ad4daa1d825fb7c8 | 218
+data word val, addr: eff7d63d3bf18eb8 | 120
+data word val, addr: 5fad412bac20b892 | 220
+data word val, addr: 8d4a83b5c585cea6 | 128
+data word val, addr: b5f2ad9c428a1965 | 228
+data word val, addr: 68e08a686aa70623 | 130
+data word val, addr: 7918326d5dcb281d | 230
+data word val, addr: a999dfcff54577f1 | 138
+data word val, addr: d048b0802d611979 | 238
+data word val, addr: 8c34bdc076fce507 | 100
+data word val, addr: ec688d520ff3c55d | 200
+data word val, addr: 5cea5f3c5cdd3b3d | 108
+data word val, addr: a6173a9aaacc4cc2 | 208
+data word val, addr: 4b7277dc264be62a | 110
+data word val, addr: 966a30970a93349d | 210
+data word val, addr: 5d8424e1b9803567 | 118
+data word val, addr: 95278fe3204996df | 218
+data word val, addr: d6dd36fbc90191eb | 120
+data word val, addr: dbc414a20fe1b165 | 220
+data word val, addr: cdc567597c6aa298 | 128
+data word val, addr: c4d70d4c1ba19d73 | 228
+data word val, addr: 73ac8641087612b7 | 130
+data word val, addr: 958a3f3614e16d2f | 230
+data word val, addr: e573926997ca72d2 | 138
+data word val, addr: 1e4e22350cdd7ffb | 238
+data word val, addr: ab1eb38d42e7b6c8 | 200
+data word val, addr: 7195b04b7de6782b | 208
+data word val, addr: ac67ecdad9b7ab7e | 210
+data word val, addr: ad4daa1d825fb7c8 | 218
+data word val, addr: 5fad412bac20b892 | 220
+data word val, addr: b5f2ad9c428a1965 | 228
+data word val, addr: 7918326d5dcb281d | 230
+data word val, addr: d048b0802d611979 | 238
+data word val, addr: ec688d520ff3c55d | 200
+data word val, addr: a6173a9aaacc4cc2 | 208
+data word val, addr: 966a30970a93349d | 210
+data word val, addr: 95278fe3204996df | 218
+data word val, addr: dbc414a20fe1b165 | 220
+data word val, addr: c4d70d4c1ba19d73 | 228
+data word val, addr: 958a3f3614e16d2f | 230
+data word val, addr: 1e4e22350cdd7ffb | 238
 Performing Calculation...
 Reading Output from C...
-low word, high word, address ec89c9dbed620f6f | 38ab014fea942259 @300 @308
-low word, high word, address 46c14324e282f161 | ccd8ce65306f6deb @310 @318
-low word, high word, address d80e53e828fa0f62 | 259524b9f110f8b7 @320 @328
-low word, high word, address d10237c222da0780 | 28bd1c62c209e76b @330 @338
-low word, high word, address 904e328db6b3466 | bddb35317dd37ad @340 @348
-low word, high word, address 2ea70cb0dac3ce50 | e974eb44b6b03130 @350 @358
-low word, high word, address 614c1c55aeb82fab | ba3395c6644c094d @360 @368
-low word, high word, address c5bfbe0df39e8f8 | f4f70347c98e07e9 @370 @378
+low word, high word, address 214703fce7125ea4 | c2f45bf8a8e8c7a5 @300 @308
+low word, high word, address df2b1856fc5d5432 | ec8a59f70be1ffb7 @310 @318
+low word, high word, address 7043c68398b0598d | 4b36b7a6fc3a3e73 @320 @328
+low word, high word, address f463c61b00a130a6 | b79024c4f76be099 @330 @338
+low word, high word, address 75eb4330bb35b47a | f9411bd1474b272d @340 @348
+low word, high word, address ff36106545769c98 | 84a1ccdd9000a298 @350 @358
+low word, high word, address ab73ae1cd46788a6 | 1867fca7f0db0931 @360 @368
+low word, high word, address 400db111a500ee2 | fd8cd486e2f5226b @370 @378
 CWRITE: low word, high word, address 0 | 0 @300 @308
 CWRITE: low word, high word, address 0 | 0 @310 @318
 CWRITE: low word, high word, address 0 | 0 @320 @328
@@ -78,64 +78,64 @@ CWRITE: low word, high word, address 0 | 0 @350 @358
 CWRITE: low word, high word, address 0 | 0 @360 @368
 CWRITE: low word, high word, address 0 | 0 @370 @378
 Loading A and B into AFU...
-data word val, addr: c00b160cc66b73ad | 100
-data word val, addr: 678f92fcc2c0f34e | 200
-data word val, addr: a5936ea62c82c8e0 | 108
-data word val, addr: dfdffeeff5c8ad83 | 208
-data word val, addr: cd896993b3eab2a | 110
-data word val, addr: 8dd2e184ecf284de | 210
-data word val, addr: 4df88d9f2646ba02 | 118
-data word val, addr: ccc9a1f7a6b99f51 | 218
-data word val, addr: a405f6715edf0eb7 | 120
-data word val, addr: 8a2bea08d92859e2 | 220
-data word val, addr: 543157d2f4fa0995 | 128
-data word val, addr: 90dc7bce38a07a70 | 228
-data word val, addr: df5d20688a768623 | 130
-data word val, addr: 584ad358c8897c7f | 230
-data word val, addr: fc2de7e319e6f6d9 | 138
-data word val, addr: 984ccff3954267b2 | 238
-data word val, addr: 56b90032f5af5eca | 100
-data word val, addr: 31db2dad647aaf87 | 200
-data word val, addr: e6fe89c5ef4453fc | 108
-data word val, addr: fb2313abf8822d6 | 208
-data word val, addr: c1e3eb627ba703c0 | 110
-data word val, addr: 1f6d7989d8a9dd1a | 210
-data word val, addr: 304b88bd0cc3be78 | 118
-data word val, addr: 5aebb3cdea6c6a5d | 218
-data word val, addr: b8d27b20001c1c95 | 120
-data word val, addr: f8b228f02c9ea249 | 220
-data word val, addr: 86fa24a8d3989f5e | 128
-data word val, addr: f0cfa38525d4f999 | 228
-data word val, addr: e3b444d8349fb564 | 130
-data word val, addr: cac0a7c181eace66 | 230
-data word val, addr: a73fe81a30bc0dc6 | 138
-data word val, addr: 26a58a82e5b55c0b | 238
-data word val, addr: 678f92fcc2c0f34e | 200
-data word val, addr: dfdffeeff5c8ad83 | 208
-data word val, addr: 8dd2e184ecf284de | 210
-data word val, addr: ccc9a1f7a6b99f51 | 218
-data word val, addr: 8a2bea08d92859e2 | 220
-data word val, addr: 90dc7bce38a07a70 | 228
-data word val, addr: 584ad358c8897c7f | 230
-data word val, addr: 984ccff3954267b2 | 238
-data word val, addr: 31db2dad647aaf87 | 200
-data word val, addr: fb2313abf8822d6 | 208
-data word val, addr: 1f6d7989d8a9dd1a | 210
-data word val, addr: 5aebb3cdea6c6a5d | 218
-data word val, addr: f8b228f02c9ea249 | 220
-data word val, addr: f0cfa38525d4f999 | 228
-data word val, addr: cac0a7c181eace66 | 230
-data word val, addr: 26a58a82e5b55c0b | 238
+data word val, addr: 633d11e9445e1f38 | 100
+data word val, addr: ebd0c00a229b4aa7 | 200
+data word val, addr: 5c6931f33a14a299 | 108
+data word val, addr: 46c701a9eb1b9c1 | 208
+data word val, addr: ddef0b82a9e57c97 | 110
+data word val, addr: 8953470687438719 | 210
+data word val, addr: d6046fb91200b5d1 | 118
+data word val, addr: d570d331dc5cb23d | 218
+data word val, addr: eff7d63d3bf18eb8 | 120
+data word val, addr: 1614006d62caeb25 | 220
+data word val, addr: 8d4a83b5c585cea6 | 128
+data word val, addr: ec3eb73266eb199e | 228
+data word val, addr: 68e08a686aa70623 | 130
+data word val, addr: 4fd407ee4f8ea18a | 230
+data word val, addr: a999dfcff54577f1 | 138
+data word val, addr: 6507951f8bf9c8bb | 238
+data word val, addr: 8c34bdc076fce507 | 100
+data word val, addr: 932fdf0db3cd6e50 | 200
+data word val, addr: 5cea5f3c5cdd3b3d | 108
+data word val, addr: eb3b302f968f32dc | 208
+data word val, addr: 4b7277dc264be62a | 110
+data word val, addr: 360ebb7d192ef0eb | 210
+data word val, addr: 5d8424e1b9803567 | 118
+data word val, addr: 2b5e45f17a8e0f6e | 218
+data word val, addr: d6dd36fbc90191eb | 120
+data word val, addr: 9d0a06814a14d02f | 220
+data word val, addr: cdc567597c6aa298 | 128
+data word val, addr: 97a5c11e6ee04554 | 228
+data word val, addr: 73ac8641087612b7 | 130
+data word val, addr: 687fae2adc69c799 | 230
+data word val, addr: e573926997ca72d2 | 138
+data word val, addr: e7716df021ce391 | 238
+data word val, addr: ebd0c00a229b4aa7 | 200
+data word val, addr: 46c701a9eb1b9c1 | 208
+data word val, addr: 8953470687438719 | 210
+data word val, addr: d570d331dc5cb23d | 218
+data word val, addr: 1614006d62caeb25 | 220
+data word val, addr: ec3eb73266eb199e | 228
+data word val, addr: 4fd407ee4f8ea18a | 230
+data word val, addr: 6507951f8bf9c8bb | 238
+data word val, addr: 932fdf0db3cd6e50 | 200
+data word val, addr: eb3b302f968f32dc | 208
+data word val, addr: 360ebb7d192ef0eb | 210
+data word val, addr: 2b5e45f17a8e0f6e | 218
+data word val, addr: 9d0a06814a14d02f | 220
+data word val, addr: 97a5c11e6ee04554 | 228
+data word val, addr: 687fae2adc69c799 | 230
+data word val, addr: e7716df021ce391 | 238
 Performing Calculation...
 Reading Output from C...
-low word, high word, address 3685e9d7bb50af2c | ba1ffe263f30cafb @300 @308
-low word, high word, address 682ff2d5fbdd5093 | 22dec96c6e48068f @310 @318
-low word, high word, address dc2221af802b06ee | 3f3fd635abdfe802 @320 @328
-low word, high word, address c6e233fca8dee324 | 1fa807d3acdcee25 @330 @338
-low word, high word, address 491f249eb7611f1 | d3f00aac029618c4 @340 @348
-low word, high word, address a6df3815cf8022c | b6c844de4826fe8d @350 @358
-low word, high word, address da3fcb96c824b3b | f035227b0bd2f131 @360 @368
-low word, high word, address f9e5f5520689145e | 21991c45fa0b20a3 @370 @378
+low word, high word, address a920f6f79db2bda7 | fb5a3959e11f15c8 @300 @308
+low word, high word, address 9992d2cabefece2 | 33b206d6ba6c05cb @310 @318
+low word, high word, address ba7bff08ffe7e978 | 6f913f86355c0aa @320 @328
+low word, high word, address 396a35651a19fbcf | e18d048cd9c9ec13 @330 @338
+low word, high word, address 2c7b4beafddf634e | 3aee08e46e0ce5 @340 @348
+low word, high word, address 4680f9cf379b336c | 367986183e9e9dc1 @350 @358
+low word, high word, address dce7fe4af34b31d8 | 461a0161c3dd3842 @360 @368
+low word, high word, address 99752c97f7733886 | a11f4a1477d7ec69 @370 @378
 CWRITE: low word, high word, address 0 | 0 @300 @308
 CWRITE: low word, high word, address 0 | 0 @310 @318
 CWRITE: low word, high word, address 0 | 0 @320 @328
@@ -145,64 +145,64 @@ CWRITE: low word, high word, address 0 | 0 @350 @358
 CWRITE: low word, high word, address 0 | 0 @360 @368
 CWRITE: low word, high word, address 0 | 0 @370 @378
 Loading A and B into AFU...
-data word val, addr: 7a1b44bbeb1f6937 | 100
-data word val, addr: f3515f96df3960d0 | 200
-data word val, addr: d20d68f9bb1cf79 | 108
-data word val, addr: 5eaeb1c18f8f4cc9 | 208
-data word val, addr: 5629a72202ed2762 | 110
-data word val, addr: 553c2d29e4582c2f | 210
-data word val, addr: 3a66d70f09f2349e | 118
-data word val, addr: 3999f73ddf7541ed | 218
-data word val, addr: 79290521a3bd661b | 120
-data word val, addr: fcc46aebfeb4fd6a | 220
-data word val, addr: bd8701a443d886b9 | 128
-data word val, addr: c6fb576c6c67f5c6 | 228
-data word val, addr: 9f073f730bcce7b8 | 130
-data word val, addr: bb7499e149fb9e8f | 230
-data word val, addr: 465c1bf4212bdce2 | 138
-data word val, addr: 11c7c0b8ce0150ea | 238
-data word val, addr: c67a34edc4494a73 | 100
-data word val, addr: e2c068d382029d1e | 200
-data word val, addr: 62956cb686d0c3d7 | 108
-data word val, addr: 93d0aa5f6d3b98af | 208
-data word val, addr: 83d0ae31da2a30c | 110
-data word val, addr: 81354258fcc215b1 | 210
-data word val, addr: 52bae37644074f48 | 118
-data word val, addr: f12eb83115b60c2f | 218
-data word val, addr: 2dc5f6d8db5da1c | 120
-data word val, addr: f0be87fa4cef0e07 | 220
-data word val, addr: 1cb7cdc5a538c6c3 | 128
-data word val, addr: 247a4dc8f9a9f6e8 | 228
-data word val, addr: 989225eff33b4416 | 130
-data word val, addr: cafcfb0cf02b9122 | 230
-data word val, addr: d4430d78ddf5c1a0 | 138
-data word val, addr: 73bafbdf9fe72f80 | 238
-data word val, addr: f3515f96df3960d0 | 200
-data word val, addr: 5eaeb1c18f8f4cc9 | 208
-data word val, addr: 553c2d29e4582c2f | 210
-data word val, addr: 3999f73ddf7541ed | 218
-data word val, addr: fcc46aebfeb4fd6a | 220
-data word val, addr: c6fb576c6c67f5c6 | 228
-data word val, addr: bb7499e149fb9e8f | 230
-data word val, addr: 11c7c0b8ce0150ea | 238
-data word val, addr: e2c068d382029d1e | 200
-data word val, addr: 93d0aa5f6d3b98af | 208
-data word val, addr: 81354258fcc215b1 | 210
-data word val, addr: f12eb83115b60c2f | 218
-data word val, addr: f0be87fa4cef0e07 | 220
-data word val, addr: 247a4dc8f9a9f6e8 | 228
-data word val, addr: cafcfb0cf02b9122 | 230
-data word val, addr: 73bafbdf9fe72f80 | 238
+data word val, addr: dd1a3f74f2bffd00 | 100
+data word val, addr: ab1eb38d42e7b6c8 | 200
+data word val, addr: a603391f5bb6590d | 108
+data word val, addr: 7195b04b7de6782b | 208
+data word val, addr: 562fc3adde6a387d | 110
+data word val, addr: ac67ecdad9b7ab7e | 210
+data word val, addr: 26cdcf6020f2e9ab | 118
+data word val, addr: ad4daa1d825fb7c8 | 218
+data word val, addr: 29491f45d1aec13e | 120
+data word val, addr: 5fad412bac20b892 | 220
+data word val, addr: e890aec32dd44f6f | 128
+data word val, addr: b5f2ad9c428a1965 | 228
+data word val, addr: 40e21ad0850b498 | 130
+data word val, addr: 7918326d5dcb281d | 230
+data word val, addr: b7bfca93935d552e | 138
+data word val, addr: d048b0802d611979 | 238
+data word val, addr: c493496cf9ca3524 | 100
+data word val, addr: ec688d520ff3c55d | 200
+data word val, addr: c4de769ce52a16e7 | 108
+data word val, addr: a6173a9aaacc4cc2 | 208
+data word val, addr: a7b8c9dc877cc8c6 | 110
+data word val, addr: 966a30970a93349d | 210
+data word val, addr: fa00360ca89c0613 | 118
+data word val, addr: 95278fe3204996df | 218
+data word val, addr: 31df0f06cabdeb34 | 120
+data word val, addr: dbc414a20fe1b165 | 220
+data word val, addr: 60a7f3e10f681607 | 128
+data word val, addr: c4d70d4c1ba19d73 | 228
+data word val, addr: 46cf9f87b5fa5ade | 130
+data word val, addr: 958a3f3614e16d2f | 230
+data word val, addr: fddeb046c0fa65e8 | 138
+data word val, addr: 1e4e22350cdd7ffb | 238
+data word val, addr: ab1eb38d42e7b6c8 | 200
+data word val, addr: 7195b04b7de6782b | 208
+data word val, addr: ac67ecdad9b7ab7e | 210
+data word val, addr: ad4daa1d825fb7c8 | 218
+data word val, addr: 5fad412bac20b892 | 220
+data word val, addr: b5f2ad9c428a1965 | 228
+data word val, addr: 7918326d5dcb281d | 230
+data word val, addr: d048b0802d611979 | 238
+data word val, addr: ec688d520ff3c55d | 200
+data word val, addr: a6173a9aaacc4cc2 | 208
+data word val, addr: 966a30970a93349d | 210
+data word val, addr: 95278fe3204996df | 218
+data word val, addr: dbc414a20fe1b165 | 220
+data word val, addr: c4d70d4c1ba19d73 | 228
+data word val, addr: 958a3f3614e16d2f | 230
+data word val, addr: 1e4e22350cdd7ffb | 238
 Performing Calculation...
 Reading Output from C...
-low word, high word, address d6fa0ec04d78a400 | 1be0ff66cb5fcc1d @300 @308
-low word, high word, address 1171f754f28cb851 | baaa7303e480a542 @310 @318
-low word, high word, address b90ed09f3c2dea5d | 11c60675dec285c5 @320 @328
-low word, high word, address f665bbd0d73be175 | 6d7e806898cec7e @330 @338
-low word, high word, address d8b98f571acbcfa9 | f477ed64c2a7933c @340 @348
-low word, high word, address 267754bbe5b6300e | f5d2d9ea1d986e72 @350 @358
-low word, high word, address 4735e4d9b2632f19 | d343dd333dee49d6 @360 @368
-low word, high word, address 22d933faeb78d918 | efda1b3ad4111194 @370 @378
+low word, high word, address fccdec76fe57bbfb | 43fcb26e23c31ea1 @300 @308
+low word, high word, address 316f371191cb2bf | 2ad8b3b9d99746bf @310 @318
+low word, high word, address 67dbebdcfdbf633e | d09e5281b90db791 @320 @328
+low word, high word, address 9942560ce545d071 | 1f0aed1b29861fb3 @330 @338
+low word, high word, address 27ed010bf835d402 | 2517ecc72026e29a @340 @348
+low word, high word, address 5b736a6fc07b751 | ced0eed5b6f8e302 @350 @358
+low word, high word, address d97ce310fabd63c5 | c18a51b70fcef69d @360 @368
+low word, high word, address 4e3eacf822d9397f | f168f22af4e7f5b2 @370 @378
 CWRITE: low word, high word, address 0 | 0 @300 @308
 CWRITE: low word, high word, address 0 | 0 @310 @318
 CWRITE: low word, high word, address 0 | 0 @320 @328
@@ -212,320 +212,320 @@ CWRITE: low word, high word, address 0 | 0 @350 @358
 CWRITE: low word, high word, address 0 | 0 @360 @368
 CWRITE: low word, high word, address 0 | 0 @370 @378
 Loading A and B into AFU...
-data word val, addr: 7a1b44bbeb1f6937 | 100
-data word val, addr: 678f92fcc2c0f34e | 200
-data word val, addr: d20d68f9bb1cf79 | 108
-data word val, addr: dfdffeeff5c8ad83 | 208
-data word val, addr: 5629a72202ed2762 | 110
-data word val, addr: 8dd2e184ecf284de | 210
-data word val, addr: 3a66d70f09f2349e | 118
-data word val, addr: ccc9a1f7a6b99f51 | 218
-data word val, addr: 79290521a3bd661b | 120
-data word val, addr: 8a2bea08d92859e2 | 220
-data word val, addr: bd8701a443d886b9 | 128
-data word val, addr: 90dc7bce38a07a70 | 228
-data word val, addr: 9f073f730bcce7b8 | 130
-data word val, addr: 584ad358c8897c7f | 230
-data word val, addr: 465c1bf4212bdce2 | 138
-data word val, addr: 984ccff3954267b2 | 238
-data word val, addr: c67a34edc4494a73 | 100
-data word val, addr: 31db2dad647aaf87 | 200
-data word val, addr: 62956cb686d0c3d7 | 108
-data word val, addr: fb2313abf8822d6 | 208
-data word val, addr: 83d0ae31da2a30c | 110
-data word val, addr: 1f6d7989d8a9dd1a | 210
-data word val, addr: 52bae37644074f48 | 118
-data word val, addr: 5aebb3cdea6c6a5d | 218
-data word val, addr: 2dc5f6d8db5da1c | 120
-data word val, addr: f8b228f02c9ea249 | 220
-data word val, addr: 1cb7cdc5a538c6c3 | 128
-data word val, addr: f0cfa38525d4f999 | 228
-data word val, addr: 989225eff33b4416 | 130
-data word val, addr: cac0a7c181eace66 | 230
-data word val, addr: d4430d78ddf5c1a0 | 138
-data word val, addr: 26a58a82e5b55c0b | 238
-data word val, addr: 678f92fcc2c0f34e | 200
-data word val, addr: dfdffeeff5c8ad83 | 208
-data word val, addr: 8dd2e184ecf284de | 210
-data word val, addr: ccc9a1f7a6b99f51 | 218
-data word val, addr: 8a2bea08d92859e2 | 220
-data word val, addr: 90dc7bce38a07a70 | 228
-data word val, addr: 584ad358c8897c7f | 230
-data word val, addr: 984ccff3954267b2 | 238
-data word val, addr: 31db2dad647aaf87 | 200
-data word val, addr: fb2313abf8822d6 | 208
-data word val, addr: 1f6d7989d8a9dd1a | 210
-data word val, addr: 5aebb3cdea6c6a5d | 218
-data word val, addr: f8b228f02c9ea249 | 220
-data word val, addr: f0cfa38525d4f999 | 228
-data word val, addr: cac0a7c181eace66 | 230
-data word val, addr: 26a58a82e5b55c0b | 238
+data word val, addr: dd1a3f74f2bffd00 | 100
+data word val, addr: ebd0c00a229b4aa7 | 200
+data word val, addr: a603391f5bb6590d | 108
+data word val, addr: 46c701a9eb1b9c1 | 208
+data word val, addr: 562fc3adde6a387d | 110
+data word val, addr: 8953470687438719 | 210
+data word val, addr: 26cdcf6020f2e9ab | 118
+data word val, addr: d570d331dc5cb23d | 218
+data word val, addr: 29491f45d1aec13e | 120
+data word val, addr: 1614006d62caeb25 | 220
+data word val, addr: e890aec32dd44f6f | 128
+data word val, addr: ec3eb73266eb199e | 228
+data word val, addr: 40e21ad0850b498 | 130
+data word val, addr: 4fd407ee4f8ea18a | 230
+data word val, addr: b7bfca93935d552e | 138
+data word val, addr: 6507951f8bf9c8bb | 238
+data word val, addr: c493496cf9ca3524 | 100
+data word val, addr: 932fdf0db3cd6e50 | 200
+data word val, addr: c4de769ce52a16e7 | 108
+data word val, addr: eb3b302f968f32dc | 208
+data word val, addr: a7b8c9dc877cc8c6 | 110
+data word val, addr: 360ebb7d192ef0eb | 210
+data word val, addr: fa00360ca89c0613 | 118
+data word val, addr: 2b5e45f17a8e0f6e | 218
+data word val, addr: 31df0f06cabdeb34 | 120
+data word val, addr: 9d0a06814a14d02f | 220
+data word val, addr: 60a7f3e10f681607 | 128
+data word val, addr: 97a5c11e6ee04554 | 228
+data word val, addr: 46cf9f87b5fa5ade | 130
+data word val, addr: 687fae2adc69c799 | 230
+data word val, addr: fddeb046c0fa65e8 | 138
+data word val, addr: e7716df021ce391 | 238
+data word val, addr: ebd0c00a229b4aa7 | 200
+data word val, addr: 46c701a9eb1b9c1 | 208
+data word val, addr: 8953470687438719 | 210
+data word val, addr: d570d331dc5cb23d | 218
+data word val, addr: 1614006d62caeb25 | 220
+data word val, addr: ec3eb73266eb199e | 228
+data word val, addr: 4fd407ee4f8ea18a | 230
+data word val, addr: 6507951f8bf9c8bb | 238
+data word val, addr: 932fdf0db3cd6e50 | 200
+data word val, addr: eb3b302f968f32dc | 208
+data word val, addr: 360ebb7d192ef0eb | 210
+data word val, addr: 2b5e45f17a8e0f6e | 218
+data word val, addr: 9d0a06814a14d02f | 220
+data word val, addr: 97a5c11e6ee04554 | 228
+data word val, addr: 687fae2adc69c799 | 230
+data word val, addr: e7716df021ce391 | 238
 Performing Calculation...
 Reading Output from C...
-low word, high word, address d39ece081ab0e0c9 | d8b5f000f617dd8a @300 @308
-low word, high word, address a13ff5f2fb52e1c | bb2ff4d6e8db3a31 @310 @318
-low word, high word, address a1cf09410eb1dd30 | 2cf40a4f91cb212f @320 @328
-low word, high word, address d99ffca731e8dab1 | ecda5c20f60a2d23 @330 @338
-low word, high word, address db880fd073a6afb0 | fa3e3b91ff6d2488 @340 @348
-low word, high word, address 46b73444b013240e | 131de16635ecf0f8 @350 @358
-low word, high word, address 35fbf55843262fc5 | d49f19ab47121a35 @360 @368
-low word, high word, address d034df273d4932b3 | db752ca1ec27034b @370 @378
+low word, high word, address 7f5ec2a01e77ed27 | 1fc8f66eec7f331f @300 @308
+low word, high word, address 4279e2a707ecf992 | ef11402e149d2674 @310 @318
+low word, high word, address 7cf7cc28c975a786 | f920f8b20b5cde67 @320 @328
+low word, high word, address efc135e9e8a1575e | 13141522fe6027a2 @330 @338
+low word, high word, address 7846a1e731c8b826 | 5227ac1fae7a145f @340 @348
+low word, high word, address af5a069c3d121d10 | da280be8110deeec @350 @358
+low word, high word, address d83660c1d2ba206b | dd00101602d5da3b @360 @368
+low word, high word, address 9701ff2716bc00c1 | aea0fd4872c6ba85 @370 @378
 Calculation finished. Testing values...
-row: 0, col: 0 | got: f6f, expected f6f [OK]
-row: 0, col: 1 | got: ed62, expected ed62 [OK]
-row: 0, col: 2 | got: c9db, expected c9db [OK]
-row: 0, col: 3 | got: ec89, expected ec89 [OK]
-row: 0, col: 4 | got: 2259, expected 2259 [OK]
-row: 0, col: 5 | got: ea94, expected ea94 [OK]
-row: 0, col: 6 | got: 14f, expected 14f [OK]
-row: 0, col: 7 | got: 38ab, expected 38ab [OK]
-row: 0, col: 8 | got: af2c, expected af2c [OK]
-row: 0, col: 9 | got: bb50, expected bb50 [OK]
-row: 0, col: 10 | got: e9d7, expected e9d7 [OK]
-row: 0, col: 11 | got: 3685, expected 3685 [OK]
-row: 0, col: 12 | got: cafb, expected cafb [OK]
-row: 0, col: 13 | got: 3f30, expected 3f30 [OK]
-row: 0, col: 14 | got: fe26, expected fe26 [OK]
-row: 0, col: 15 | got: ba1f, expected ba1f [OK]
-row: 1, col: 0 | got: f161, expected f161 [OK]
-row: 1, col: 1 | got: e282, expected e282 [OK]
-row: 1, col: 2 | got: 4324, expected 4324 [OK]
-row: 1, col: 3 | got: 46c1, expected 46c1 [OK]
-row: 1, col: 4 | got: 6deb, expected 6deb [OK]
-row: 1, col: 5 | got: 306f, expected 306f [OK]
-row: 1, col: 6 | got: ce65, expected ce65 [OK]
-row: 1, col: 7 | got: ccd8, expected ccd8 [OK]
-row: 1, col: 8 | got: 5093, expected 5093 [OK]
-row: 1, col: 9 | got: fbdd, expected fbdd [OK]
-row: 1, col: 10 | got: f2d5, expected f2d5 [OK]
-row: 1, col: 11 | got: 682f, expected 682f [OK]
-row: 1, col: 12 | got: 68f, expected 68f [OK]
-row: 1, col: 13 | got: 6e48, expected 6e48 [OK]
-row: 1, col: 14 | got: c96c, expected c96c [OK]
-row: 1, col: 15 | got: 22de, expected 22de [OK]
-row: 2, col: 0 | got: f62, expected f62 [OK]
-row: 2, col: 1 | got: 28fa, expected 28fa [OK]
-row: 2, col: 2 | got: 53e8, expected 53e8 [OK]
-row: 2, col: 3 | got: d80e, expected d80e [OK]
-row: 2, col: 4 | got: f8b7, expected f8b7 [OK]
-row: 2, col: 5 | got: f110, expected f110 [OK]
-row: 2, col: 6 | got: 24b9, expected 24b9 [OK]
-row: 2, col: 7 | got: 2595, expected 2595 [OK]
-row: 2, col: 8 | got: 6ee, expected 6ee [OK]
-row: 2, col: 9 | got: 802b, expected 802b [OK]
-row: 2, col: 10 | got: 21af, expected 21af [OK]
-row: 2, col: 11 | got: dc22, expected dc22 [OK]
-row: 2, col: 12 | got: e802, expected e802 [OK]
-row: 2, col: 13 | got: abdf, expected abdf [OK]
-row: 2, col: 14 | got: d635, expected d635 [OK]
-row: 2, col: 15 | got: 3f3f, expected 3f3f [OK]
-row: 3, col: 0 | got: 780, expected 780 [OK]
-row: 3, col: 1 | got: 22da, expected 22da [OK]
-row: 3, col: 2 | got: 37c2, expected 37c2 [OK]
-row: 3, col: 3 | got: d102, expected d102 [OK]
-row: 3, col: 4 | got: e76b, expected e76b [OK]
-row: 3, col: 5 | got: c209, expected c209 [OK]
-row: 3, col: 6 | got: 1c62, expected 1c62 [OK]
-row: 3, col: 7 | got: 28bd, expected 28bd [OK]
-row: 3, col: 8 | got: e324, expected e324 [OK]
-row: 3, col: 9 | got: a8de, expected a8de [OK]
-row: 3, col: 10 | got: 33fc, expected 33fc [OK]
-row: 3, col: 11 | got: c6e2, expected c6e2 [OK]
-row: 3, col: 12 | got: ee25, expected ee25 [OK]
-row: 3, col: 13 | got: acdc, expected acdc [OK]
-row: 3, col: 14 | got: 7d3, expected 7d3 [OK]
-row: 3, col: 15 | got: 1fa8, expected 1fa8 [OK]
-row: 4, col: 0 | got: 3466, expected 3466 [OK]
-row: 4, col: 1 | got: db6b, expected db6b [OK]
-row: 4, col: 2 | got: e328, expected e328 [OK]
-row: 4, col: 3 | got: 904, expected 904 [OK]
-row: 4, col: 4 | got: 37ad, expected 37ad [OK]
-row: 4, col: 5 | got: 17dd, expected 17dd [OK]
-row: 4, col: 6 | got: b353, expected b353 [OK]
-row: 4, col: 7 | got: bdd, expected bdd [OK]
-row: 4, col: 8 | got: 11f1, expected 11f1 [OK]
-row: 4, col: 9 | got: eb76, expected eb76 [OK]
-row: 4, col: 10 | got: f249, expected f249 [OK]
-row: 4, col: 11 | got: 491, expected 491 [OK]
-row: 4, col: 12 | got: 18c4, expected 18c4 [OK]
-row: 4, col: 13 | got: 296, expected 296 [OK]
-row: 4, col: 14 | got: aac, expected aac [OK]
-row: 4, col: 15 | got: d3f0, expected d3f0 [OK]
-row: 5, col: 0 | got: ce50, expected ce50 [OK]
-row: 5, col: 1 | got: dac3, expected dac3 [OK]
-row: 5, col: 2 | got: cb0, expected cb0 [OK]
-row: 5, col: 3 | got: 2ea7, expected 2ea7 [OK]
-row: 5, col: 4 | got: 3130, expected 3130 [OK]
-row: 5, col: 5 | got: b6b0, expected b6b0 [OK]
-row: 5, col: 6 | got: eb44, expected eb44 [OK]
-row: 5, col: 7 | got: e974, expected e974 [OK]
-row: 5, col: 8 | got: 22c, expected 22c [OK]
-row: 5, col: 9 | got: 5cf8, expected 5cf8 [OK]
-row: 5, col: 10 | got: f381, expected f381 [OK]
-row: 5, col: 11 | got: a6d, expected a6d [OK]
-row: 5, col: 12 | got: fe8d, expected fe8d [OK]
-row: 5, col: 13 | got: 4826, expected 4826 [OK]
-row: 5, col: 14 | got: 44de, expected 44de [OK]
-row: 5, col: 15 | got: b6c8, expected b6c8 [OK]
-row: 6, col: 0 | got: 2fab, expected 2fab [OK]
-row: 6, col: 1 | got: aeb8, expected aeb8 [OK]
-row: 6, col: 2 | got: 1c55, expected 1c55 [OK]
-row: 6, col: 3 | got: 614c, expected 614c [OK]
-row: 6, col: 4 | got: 94d, expected 94d [OK]
-row: 6, col: 5 | got: 644c, expected 644c [OK]
-row: 6, col: 6 | got: 95c6, expected 95c6 [OK]
-row: 6, col: 7 | got: ba33, expected ba33 [OK]
-row: 6, col: 8 | got: 4b3b, expected 4b3b [OK]
-row: 6, col: 9 | got: 6c82, expected 6c82 [OK]
-row: 6, col: 10 | got: fcb9, expected fcb9 [OK]
-row: 6, col: 11 | got: da3, expected da3 [OK]
-row: 6, col: 12 | got: f131, expected f131 [OK]
-row: 6, col: 13 | got: bd2, expected bd2 [OK]
-row: 6, col: 14 | got: 227b, expected 227b [OK]
-row: 6, col: 15 | got: f035, expected f035 [OK]
-row: 7, col: 0 | got: e8f8, expected e8f8 [OK]
-row: 7, col: 1 | got: df39, expected df39 [OK]
-row: 7, col: 2 | got: fbe0, expected fbe0 [OK]
-row: 7, col: 3 | got: c5b, expected c5b [OK]
-row: 7, col: 4 | got: 7e9, expected 7e9 [OK]
-row: 7, col: 5 | got: c98e, expected c98e [OK]
-row: 7, col: 6 | got: 347, expected 347 [OK]
-row: 7, col: 7 | got: f4f7, expected f4f7 [OK]
-row: 7, col: 8 | got: 145e, expected 145e [OK]
-row: 7, col: 9 | got: 689, expected 689 [OK]
-row: 7, col: 10 | got: f552, expected f552 [OK]
-row: 7, col: 11 | got: f9e5, expected f9e5 [OK]
-row: 7, col: 12 | got: 20a3, expected 20a3 [OK]
-row: 7, col: 13 | got: fa0b, expected fa0b [OK]
-row: 7, col: 14 | got: 1c45, expected 1c45 [OK]
-row: 7, col: 15 | got: 2199, expected 2199 [OK]
-row: 8, col: 0 | got: a400, expected a400 [OK]
-row: 8, col: 1 | got: 4d78, expected 4d78 [OK]
-row: 8, col: 2 | got: ec0, expected ec0 [OK]
-row: 8, col: 3 | got: d6fa, expected d6fa [OK]
-row: 8, col: 4 | got: cc1d, expected cc1d [OK]
-row: 8, col: 5 | got: cb5f, expected cb5f [OK]
-row: 8, col: 6 | got: ff66, expected ff66 [OK]
-row: 8, col: 7 | got: 1be0, expected 1be0 [OK]
-row: 8, col: 8 | got: e0c9, expected e0c9 [OK]
-row: 8, col: 9 | got: 1ab0, expected 1ab0 [OK]
-row: 8, col: 10 | got: ce08, expected ce08 [OK]
-row: 8, col: 11 | got: d39e, expected d39e [OK]
-row: 8, col: 12 | got: dd8a, expected dd8a [OK]
-row: 8, col: 13 | got: f617, expected f617 [OK]
-row: 8, col: 14 | got: f000, expected f000 [OK]
-row: 8, col: 15 | got: d8b5, expected d8b5 [OK]
-row: 9, col: 0 | got: b851, expected b851 [OK]
-row: 9, col: 1 | got: f28c, expected f28c [OK]
-row: 9, col: 2 | got: f754, expected f754 [OK]
-row: 9, col: 3 | got: 1171, expected 1171 [OK]
-row: 9, col: 4 | got: a542, expected a542 [OK]
-row: 9, col: 5 | got: e480, expected e480 [OK]
-row: 9, col: 6 | got: 7303, expected 7303 [OK]
-row: 9, col: 7 | got: baaa, expected baaa [OK]
-row: 9, col: 8 | got: 2e1c, expected 2e1c [OK]
-row: 9, col: 9 | got: 2fb5, expected 2fb5 [OK]
-row: 9, col: 10 | got: ff5f, expected ff5f [OK]
-row: 9, col: 11 | got: a13, expected a13 [OK]
-row: 9, col: 12 | got: 3a31, expected 3a31 [OK]
-row: 9, col: 13 | got: e8db, expected e8db [OK]
-row: 9, col: 14 | got: f4d6, expected f4d6 [OK]
-row: 9, col: 15 | got: bb2f, expected bb2f [OK]
-row: 10, col: 0 | got: ea5d, expected ea5d [OK]
-row: 10, col: 1 | got: 3c2d, expected 3c2d [OK]
-row: 10, col: 2 | got: d09f, expected d09f [OK]
-row: 10, col: 3 | got: b90e, expected b90e [OK]
-row: 10, col: 4 | got: 85c5, expected 85c5 [OK]
-row: 10, col: 5 | got: dec2, expected dec2 [OK]
-row: 10, col: 6 | got: 675, expected 675 [OK]
-row: 10, col: 7 | got: 11c6, expected 11c6 [OK]
-row: 10, col: 8 | got: dd30, expected dd30 [OK]
-row: 10, col: 9 | got: eb1, expected eb1 [OK]
-row: 10, col: 10 | got: 941, expected 941 [OK]
-row: 10, col: 11 | got: a1cf, expected a1cf [OK]
-row: 10, col: 12 | got: 212f, expected 212f [OK]
-row: 10, col: 13 | got: 91cb, expected 91cb [OK]
-row: 10, col: 14 | got: a4f, expected a4f [OK]
-row: 10, col: 15 | got: 2cf4, expected 2cf4 [OK]
-row: 11, col: 0 | got: e175, expected e175 [OK]
-row: 11, col: 1 | got: d73b, expected d73b [OK]
-row: 11, col: 2 | got: bbd0, expected bbd0 [OK]
-row: 11, col: 3 | got: f665, expected f665 [OK]
-row: 11, col: 4 | got: ec7e, expected ec7e [OK]
-row: 11, col: 5 | got: 898c, expected 898c [OK]
-row: 11, col: 6 | got: e806, expected e806 [OK]
-row: 11, col: 7 | got: 6d7, expected 6d7 [OK]
-row: 11, col: 8 | got: dab1, expected dab1 [OK]
-row: 11, col: 9 | got: 31e8, expected 31e8 [OK]
-row: 11, col: 10 | got: fca7, expected fca7 [OK]
-row: 11, col: 11 | got: d99f, expected d99f [OK]
-row: 11, col: 12 | got: 2d23, expected 2d23 [OK]
-row: 11, col: 13 | got: f60a, expected f60a [OK]
-row: 11, col: 14 | got: 5c20, expected 5c20 [OK]
-row: 11, col: 15 | got: ecda, expected ecda [OK]
-row: 12, col: 0 | got: cfa9, expected cfa9 [OK]
-row: 12, col: 1 | got: 1acb, expected 1acb [OK]
-row: 12, col: 2 | got: 8f57, expected 8f57 [OK]
-row: 12, col: 3 | got: d8b9, expected d8b9 [OK]
-row: 12, col: 4 | got: 933c, expected 933c [OK]
-row: 12, col: 5 | got: c2a7, expected c2a7 [OK]
-row: 12, col: 6 | got: ed64, expected ed64 [OK]
-row: 12, col: 7 | got: f477, expected f477 [OK]
-row: 12, col: 8 | got: afb0, expected afb0 [OK]
-row: 12, col: 9 | got: 73a6, expected 73a6 [OK]
-row: 12, col: 10 | got: fd0, expected fd0 [OK]
-row: 12, col: 11 | got: db88, expected db88 [OK]
-row: 12, col: 12 | got: 2488, expected 2488 [OK]
-row: 12, col: 13 | got: ff6d, expected ff6d [OK]
-row: 12, col: 14 | got: 3b91, expected 3b91 [OK]
-row: 12, col: 15 | got: fa3e, expected fa3e [OK]
-row: 13, col: 0 | got: 300e, expected 300e [OK]
-row: 13, col: 1 | got: e5b6, expected e5b6 [OK]
-row: 13, col: 2 | got: 54bb, expected 54bb [OK]
-row: 13, col: 3 | got: 2677, expected 2677 [OK]
-row: 13, col: 4 | got: 6e72, expected 6e72 [OK]
-row: 13, col: 5 | got: 1d98, expected 1d98 [OK]
-row: 13, col: 6 | got: d9ea, expected d9ea [OK]
-row: 13, col: 7 | got: f5d2, expected f5d2 [OK]
-row: 13, col: 8 | got: 240e, expected 240e [OK]
-row: 13, col: 9 | got: b013, expected b013 [OK]
-row: 13, col: 10 | got: 3444, expected 3444 [OK]
-row: 13, col: 11 | got: 46b7, expected 46b7 [OK]
-row: 13, col: 12 | got: f0f8, expected f0f8 [OK]
-row: 13, col: 13 | got: 35ec, expected 35ec [OK]
-row: 13, col: 14 | got: e166, expected e166 [OK]
-row: 13, col: 15 | got: 131d, expected 131d [OK]
-row: 14, col: 0 | got: 2f19, expected 2f19 [OK]
-row: 14, col: 1 | got: b263, expected b263 [OK]
-row: 14, col: 2 | got: e4d9, expected e4d9 [OK]
-row: 14, col: 3 | got: 4735, expected 4735 [OK]
-row: 14, col: 4 | got: 49d6, expected 49d6 [OK]
-row: 14, col: 5 | got: 3dee, expected 3dee [OK]
-row: 14, col: 6 | got: dd33, expected dd33 [OK]
-row: 14, col: 7 | got: d343, expected d343 [OK]
-row: 14, col: 8 | got: 2fc5, expected 2fc5 [OK]
-row: 14, col: 9 | got: 4326, expected 4326 [OK]
-row: 14, col: 10 | got: f558, expected f558 [OK]
-row: 14, col: 11 | got: 35fb, expected 35fb [OK]
-row: 14, col: 12 | got: 1a35, expected 1a35 [OK]
-row: 14, col: 13 | got: 4712, expected 4712 [OK]
-row: 14, col: 14 | got: 19ab, expected 19ab [OK]
-row: 14, col: 15 | got: d49f, expected d49f [OK]
-row: 15, col: 0 | got: d918, expected d918 [OK]
-row: 15, col: 1 | got: eb78, expected eb78 [OK]
-row: 15, col: 2 | got: 33fa, expected 33fa [OK]
-row: 15, col: 3 | got: 22d9, expected 22d9 [OK]
-row: 15, col: 4 | got: 1194, expected 1194 [OK]
-row: 15, col: 5 | got: d411, expected d411 [OK]
-row: 15, col: 6 | got: 1b3a, expected 1b3a [OK]
-row: 15, col: 7 | got: efda, expected efda [OK]
-row: 15, col: 8 | got: 32b3, expected 32b3 [OK]
-row: 15, col: 9 | got: 3d49, expected 3d49 [OK]
-row: 15, col: 10 | got: df27, expected df27 [OK]
-row: 15, col: 11 | got: d034, expected d034 [OK]
-row: 15, col: 12 | got: 34b, expected 34b [OK]
-row: 15, col: 13 | got: ec27, expected ec27 [OK]
-row: 15, col: 14 | got: 2ca1, expected 2ca1 [OK]
-row: 15, col: 15 | got: db75, expected db75 [OK]
+row: 0, col: 0 | got: 5ea4, expected 5ea4 [OK]
+row: 0, col: 1 | got: e712, expected e712 [OK]
+row: 0, col: 2 | got: 3fc, expected 3fc [OK]
+row: 0, col: 3 | got: 2147, expected 2147 [OK]
+row: 0, col: 4 | got: c7a5, expected c7a5 [OK]
+row: 0, col: 5 | got: a8e8, expected a8e8 [OK]
+row: 0, col: 6 | got: 5bf8, expected 5bf8 [OK]
+row: 0, col: 7 | got: c2f4, expected c2f4 [OK]
+row: 0, col: 8 | got: bda7, expected bda7 [OK]
+row: 0, col: 9 | got: 9db2, expected 9db2 [OK]
+row: 0, col: 10 | got: f6f7, expected f6f7 [OK]
+row: 0, col: 11 | got: a920, expected a920 [OK]
+row: 0, col: 12 | got: 15c8, expected 15c8 [OK]
+row: 0, col: 13 | got: e11f, expected e11f [OK]
+row: 0, col: 14 | got: 3959, expected 3959 [OK]
+row: 0, col: 15 | got: fb5a, expected fb5a [OK]
+row: 1, col: 0 | got: 5432, expected 5432 [OK]
+row: 1, col: 1 | got: fc5d, expected fc5d [OK]
+row: 1, col: 2 | got: 1856, expected 1856 [OK]
+row: 1, col: 3 | got: df2b, expected df2b [OK]
+row: 1, col: 4 | got: ffb7, expected ffb7 [OK]
+row: 1, col: 5 | got: be1, expected be1 [OK]
+row: 1, col: 6 | got: 59f7, expected 59f7 [OK]
+row: 1, col: 7 | got: ec8a, expected ec8a [OK]
+row: 1, col: 8 | got: ece2, expected ece2 [OK]
+row: 1, col: 9 | got: abef, expected abef [OK]
+row: 1, col: 10 | got: 2d2c, expected 2d2c [OK]
+row: 1, col: 11 | got: 999, expected 999 [OK]
+row: 1, col: 12 | got: 5cb, expected 5cb [OK]
+row: 1, col: 13 | got: ba6c, expected ba6c [OK]
+row: 1, col: 14 | got: 6d6, expected 6d6 [OK]
+row: 1, col: 15 | got: 33b2, expected 33b2 [OK]
+row: 2, col: 0 | got: 598d, expected 598d [OK]
+row: 2, col: 1 | got: 98b0, expected 98b0 [OK]
+row: 2, col: 2 | got: c683, expected c683 [OK]
+row: 2, col: 3 | got: 7043, expected 7043 [OK]
+row: 2, col: 4 | got: 3e73, expected 3e73 [OK]
+row: 2, col: 5 | got: fc3a, expected fc3a [OK]
+row: 2, col: 6 | got: b7a6, expected b7a6 [OK]
+row: 2, col: 7 | got: 4b36, expected 4b36 [OK]
+row: 2, col: 8 | got: e978, expected e978 [OK]
+row: 2, col: 9 | got: ffe7, expected ffe7 [OK]
+row: 2, col: 10 | got: ff08, expected ff08 [OK]
+row: 2, col: 11 | got: ba7b, expected ba7b [OK]
+row: 2, col: 12 | got: c0aa, expected c0aa [OK]
+row: 2, col: 13 | got: 6355, expected 6355 [OK]
+row: 2, col: 14 | got: 13f8, expected 13f8 [OK]
+row: 2, col: 15 | got: 6f9, expected 6f9 [OK]
+row: 3, col: 0 | got: 30a6, expected 30a6 [OK]
+row: 3, col: 1 | got: a1, expected a1 [OK]
+row: 3, col: 2 | got: c61b, expected c61b [OK]
+row: 3, col: 3 | got: f463, expected f463 [OK]
+row: 3, col: 4 | got: e099, expected e099 [OK]
+row: 3, col: 5 | got: f76b, expected f76b [OK]
+row: 3, col: 6 | got: 24c4, expected 24c4 [OK]
+row: 3, col: 7 | got: b790, expected b790 [OK]
+row: 3, col: 8 | got: fbcf, expected fbcf [OK]
+row: 3, col: 9 | got: 1a19, expected 1a19 [OK]
+row: 3, col: 10 | got: 3565, expected 3565 [OK]
+row: 3, col: 11 | got: 396a, expected 396a [OK]
+row: 3, col: 12 | got: ec13, expected ec13 [OK]
+row: 3, col: 13 | got: d9c9, expected d9c9 [OK]
+row: 3, col: 14 | got: 48c, expected 48c [OK]
+row: 3, col: 15 | got: e18d, expected e18d [OK]
+row: 4, col: 0 | got: b47a, expected b47a [OK]
+row: 4, col: 1 | got: bb35, expected bb35 [OK]
+row: 4, col: 2 | got: 4330, expected 4330 [OK]
+row: 4, col: 3 | got: 75eb, expected 75eb [OK]
+row: 4, col: 4 | got: 272d, expected 272d [OK]
+row: 4, col: 5 | got: 474b, expected 474b [OK]
+row: 4, col: 6 | got: 1bd1, expected 1bd1 [OK]
+row: 4, col: 7 | got: f941, expected f941 [OK]
+row: 4, col: 8 | got: 634e, expected 634e [OK]
+row: 4, col: 9 | got: fddf, expected fddf [OK]
+row: 4, col: 10 | got: 4bea, expected 4bea [OK]
+row: 4, col: 11 | got: 2c7b, expected 2c7b [OK]
+row: 4, col: 12 | got: ce5, expected ce5 [OK]
+row: 4, col: 13 | got: e46e, expected e46e [OK]
+row: 4, col: 14 | got: ee08, expected ee08 [OK]
+row: 4, col: 15 | got: 3a, expected 3a [OK]
+row: 5, col: 0 | got: 9c98, expected 9c98 [OK]
+row: 5, col: 1 | got: 4576, expected 4576 [OK]
+row: 5, col: 2 | got: 1065, expected 1065 [OK]
+row: 5, col: 3 | got: ff36, expected ff36 [OK]
+row: 5, col: 4 | got: a298, expected a298 [OK]
+row: 5, col: 5 | got: 9000, expected 9000 [OK]
+row: 5, col: 6 | got: ccdd, expected ccdd [OK]
+row: 5, col: 7 | got: 84a1, expected 84a1 [OK]
+row: 5, col: 8 | got: 336c, expected 336c [OK]
+row: 5, col: 9 | got: 379b, expected 379b [OK]
+row: 5, col: 10 | got: f9cf, expected f9cf [OK]
+row: 5, col: 11 | got: 4680, expected 4680 [OK]
+row: 5, col: 12 | got: 9dc1, expected 9dc1 [OK]
+row: 5, col: 13 | got: 3e9e, expected 3e9e [OK]
+row: 5, col: 14 | got: 8618, expected 8618 [OK]
+row: 5, col: 15 | got: 3679, expected 3679 [OK]
+row: 6, col: 0 | got: 88a6, expected 88a6 [OK]
+row: 6, col: 1 | got: d467, expected d467 [OK]
+row: 6, col: 2 | got: ae1c, expected ae1c [OK]
+row: 6, col: 3 | got: ab73, expected ab73 [OK]
+row: 6, col: 4 | got: 931, expected 931 [OK]
+row: 6, col: 5 | got: f0db, expected f0db [OK]
+row: 6, col: 6 | got: fca7, expected fca7 [OK]
+row: 6, col: 7 | got: 1867, expected 1867 [OK]
+row: 6, col: 8 | got: 31d8, expected 31d8 [OK]
+row: 6, col: 9 | got: f34b, expected f34b [OK]
+row: 6, col: 10 | got: fe4a, expected fe4a [OK]
+row: 6, col: 11 | got: dce7, expected dce7 [OK]
+row: 6, col: 12 | got: 3842, expected 3842 [OK]
+row: 6, col: 13 | got: c3dd, expected c3dd [OK]
+row: 6, col: 14 | got: 161, expected 161 [OK]
+row: 6, col: 15 | got: 461a, expected 461a [OK]
+row: 7, col: 0 | got: ee2, expected ee2 [OK]
+row: 7, col: 1 | got: 1a50, expected 1a50 [OK]
+row: 7, col: 2 | got: db11, expected db11 [OK]
+row: 7, col: 3 | got: 400, expected 400 [OK]
+row: 7, col: 4 | got: 226b, expected 226b [OK]
+row: 7, col: 5 | got: e2f5, expected e2f5 [OK]
+row: 7, col: 6 | got: d486, expected d486 [OK]
+row: 7, col: 7 | got: fd8c, expected fd8c [OK]
+row: 7, col: 8 | got: 3886, expected 3886 [OK]
+row: 7, col: 9 | got: f773, expected f773 [OK]
+row: 7, col: 10 | got: 2c97, expected 2c97 [OK]
+row: 7, col: 11 | got: 9975, expected 9975 [OK]
+row: 7, col: 12 | got: ec69, expected ec69 [OK]
+row: 7, col: 13 | got: 77d7, expected 77d7 [OK]
+row: 7, col: 14 | got: 4a14, expected 4a14 [OK]
+row: 7, col: 15 | got: a11f, expected a11f [OK]
+row: 8, col: 0 | got: bbfb, expected bbfb [OK]
+row: 8, col: 1 | got: fe57, expected fe57 [OK]
+row: 8, col: 2 | got: ec76, expected ec76 [OK]
+row: 8, col: 3 | got: fccd, expected fccd [OK]
+row: 8, col: 4 | got: 1ea1, expected 1ea1 [OK]
+row: 8, col: 5 | got: 23c3, expected 23c3 [OK]
+row: 8, col: 6 | got: b26e, expected b26e [OK]
+row: 8, col: 7 | got: 43fc, expected 43fc [OK]
+row: 8, col: 8 | got: ed27, expected ed27 [OK]
+row: 8, col: 9 | got: 1e77, expected 1e77 [OK]
+row: 8, col: 10 | got: c2a0, expected c2a0 [OK]
+row: 8, col: 11 | got: 7f5e, expected 7f5e [OK]
+row: 8, col: 12 | got: 331f, expected 331f [OK]
+row: 8, col: 13 | got: ec7f, expected ec7f [OK]
+row: 8, col: 14 | got: f66e, expected f66e [OK]
+row: 8, col: 15 | got: 1fc8, expected 1fc8 [OK]
+row: 9, col: 0 | got: b2bf, expected b2bf [OK]
+row: 9, col: 1 | got: 191c, expected 191c [OK]
+row: 9, col: 2 | got: f371, expected f371 [OK]
+row: 9, col: 3 | got: 316, expected 316 [OK]
+row: 9, col: 4 | got: 46bf, expected 46bf [OK]
+row: 9, col: 5 | got: d997, expected d997 [OK]
+row: 9, col: 6 | got: b3b9, expected b3b9 [OK]
+row: 9, col: 7 | got: 2ad8, expected 2ad8 [OK]
+row: 9, col: 8 | got: f992, expected f992 [OK]
+row: 9, col: 9 | got: 7ec, expected 7ec [OK]
+row: 9, col: 10 | got: e2a7, expected e2a7 [OK]
+row: 9, col: 11 | got: 4279, expected 4279 [OK]
+row: 9, col: 12 | got: 2674, expected 2674 [OK]
+row: 9, col: 13 | got: 149d, expected 149d [OK]
+row: 9, col: 14 | got: 402e, expected 402e [OK]
+row: 9, col: 15 | got: ef11, expected ef11 [OK]
+row: 10, col: 0 | got: 633e, expected 633e [OK]
+row: 10, col: 1 | got: fdbf, expected fdbf [OK]
+row: 10, col: 2 | got: ebdc, expected ebdc [OK]
+row: 10, col: 3 | got: 67db, expected 67db [OK]
+row: 10, col: 4 | got: b791, expected b791 [OK]
+row: 10, col: 5 | got: b90d, expected b90d [OK]
+row: 10, col: 6 | got: 5281, expected 5281 [OK]
+row: 10, col: 7 | got: d09e, expected d09e [OK]
+row: 10, col: 8 | got: a786, expected a786 [OK]
+row: 10, col: 9 | got: c975, expected c975 [OK]
+row: 10, col: 10 | got: cc28, expected cc28 [OK]
+row: 10, col: 11 | got: 7cf7, expected 7cf7 [OK]
+row: 10, col: 12 | got: de67, expected de67 [OK]
+row: 10, col: 13 | got: b5c, expected b5c [OK]
+row: 10, col: 14 | got: f8b2, expected f8b2 [OK]
+row: 10, col: 15 | got: f920, expected f920 [OK]
+row: 11, col: 0 | got: d071, expected d071 [OK]
+row: 11, col: 1 | got: e545, expected e545 [OK]
+row: 11, col: 2 | got: 560c, expected 560c [OK]
+row: 11, col: 3 | got: 9942, expected 9942 [OK]
+row: 11, col: 4 | got: 1fb3, expected 1fb3 [OK]
+row: 11, col: 5 | got: 2986, expected 2986 [OK]
+row: 11, col: 6 | got: ed1b, expected ed1b [OK]
+row: 11, col: 7 | got: 1f0a, expected 1f0a [OK]
+row: 11, col: 8 | got: 575e, expected 575e [OK]
+row: 11, col: 9 | got: e8a1, expected e8a1 [OK]
+row: 11, col: 10 | got: 35e9, expected 35e9 [OK]
+row: 11, col: 11 | got: efc1, expected efc1 [OK]
+row: 11, col: 12 | got: 27a2, expected 27a2 [OK]
+row: 11, col: 13 | got: fe60, expected fe60 [OK]
+row: 11, col: 14 | got: 1522, expected 1522 [OK]
+row: 11, col: 15 | got: 1314, expected 1314 [OK]
+row: 12, col: 0 | got: d402, expected d402 [OK]
+row: 12, col: 1 | got: f835, expected f835 [OK]
+row: 12, col: 2 | got: 10b, expected 10b [OK]
+row: 12, col: 3 | got: 27ed, expected 27ed [OK]
+row: 12, col: 4 | got: e29a, expected e29a [OK]
+row: 12, col: 5 | got: 2026, expected 2026 [OK]
+row: 12, col: 6 | got: ecc7, expected ecc7 [OK]
+row: 12, col: 7 | got: 2517, expected 2517 [OK]
+row: 12, col: 8 | got: b826, expected b826 [OK]
+row: 12, col: 9 | got: 31c8, expected 31c8 [OK]
+row: 12, col: 10 | got: a1e7, expected a1e7 [OK]
+row: 12, col: 11 | got: 7846, expected 7846 [OK]
+row: 12, col: 12 | got: 145f, expected 145f [OK]
+row: 12, col: 13 | got: ae7a, expected ae7a [OK]
+row: 12, col: 14 | got: ac1f, expected ac1f [OK]
+row: 12, col: 15 | got: 5227, expected 5227 [OK]
+row: 13, col: 0 | got: b751, expected b751 [OK]
+row: 13, col: 1 | got: fc07, expected fc07 [OK]
+row: 13, col: 2 | got: 36a6, expected 36a6 [OK]
+row: 13, col: 3 | got: 5b7, expected 5b7 [OK]
+row: 13, col: 4 | got: e302, expected e302 [OK]
+row: 13, col: 5 | got: b6f8, expected b6f8 [OK]
+row: 13, col: 6 | got: eed5, expected eed5 [OK]
+row: 13, col: 7 | got: ced0, expected ced0 [OK]
+row: 13, col: 8 | got: 1d10, expected 1d10 [OK]
+row: 13, col: 9 | got: 3d12, expected 3d12 [OK]
+row: 13, col: 10 | got: 69c, expected 69c [OK]
+row: 13, col: 11 | got: af5a, expected af5a [OK]
+row: 13, col: 12 | got: eeec, expected eeec [OK]
+row: 13, col: 13 | got: 110d, expected 110d [OK]
+row: 13, col: 14 | got: be8, expected be8 [OK]
+row: 13, col: 15 | got: da28, expected da28 [OK]
+row: 14, col: 0 | got: 63c5, expected 63c5 [OK]
+row: 14, col: 1 | got: fabd, expected fabd [OK]
+row: 14, col: 2 | got: e310, expected e310 [OK]
+row: 14, col: 3 | got: d97c, expected d97c [OK]
+row: 14, col: 4 | got: f69d, expected f69d [OK]
+row: 14, col: 5 | got: fce, expected fce [OK]
+row: 14, col: 6 | got: 51b7, expected 51b7 [OK]
+row: 14, col: 7 | got: c18a, expected c18a [OK]
+row: 14, col: 8 | got: 206b, expected 206b [OK]
+row: 14, col: 9 | got: d2ba, expected d2ba [OK]
+row: 14, col: 10 | got: 60c1, expected 60c1 [OK]
+row: 14, col: 11 | got: d836, expected d836 [OK]
+row: 14, col: 12 | got: da3b, expected da3b [OK]
+row: 14, col: 13 | got: 2d5, expected 2d5 [OK]
+row: 14, col: 14 | got: 1016, expected 1016 [OK]
+row: 14, col: 15 | got: dd00, expected dd00 [OK]
+row: 15, col: 0 | got: 397f, expected 397f [OK]
+row: 15, col: 1 | got: 22d9, expected 22d9 [OK]
+row: 15, col: 2 | got: acf8, expected acf8 [OK]
+row: 15, col: 3 | got: 4e3e, expected 4e3e [OK]
+row: 15, col: 4 | got: f5b2, expected f5b2 [OK]
+row: 15, col: 5 | got: f4e7, expected f4e7 [OK]
+row: 15, col: 6 | got: f22a, expected f22a [OK]
+row: 15, col: 7 | got: f168, expected f168 [OK]
+row: 15, col: 8 | got: c1, expected c1 [OK]
+row: 15, col: 9 | got: 16bc, expected 16bc [OK]
+row: 15, col: 10 | got: ff27, expected ff27 [OK]
+row: 15, col: 11 | got: 9701, expected 9701 [OK]
+row: 15, col: 12 | got: ba85, expected ba85 [OK]
+row: 15, col: 13 | got: 72c6, expected 72c6 [OK]
+row: 15, col: 14 | got: fd48, expected fd48 [OK]
+row: 15, col: 15 | got: aea0, expected aea0 [OK]
 All tests passed. No errors detected.
-total time: 3459298. ops_rate: 32. compute_ops_rate: 32
+total time: 0.000133. total_compute: 0.000001.ops_rate: 61796455.678004. compute_ops_rate: 8284482416.693095

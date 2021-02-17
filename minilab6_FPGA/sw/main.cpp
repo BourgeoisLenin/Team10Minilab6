@@ -29,7 +29,7 @@
 #include <climits>
 #include <unistd.h>
 #include <time.h>
-
+#include <math.h>
 #include <opae/utils.h>
 
 #include "AFU.h"
@@ -54,7 +54,7 @@ using namespace std;
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
 #define DIM 8
-#define DIM_FULL 64
+#define DIM_FULL 8
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
@@ -180,12 +180,12 @@ int main(int argc, char *argv[]) {
 	struct timespec start;
  	struct timespec start_compute;
  	struct timespec end_compute;
- 	int total_compute = 0;
+ 	double total_compute;
  	struct timespec end;
- 	int total_time = 0;
- 	int ops_rate = 0;
- 	int compute_ops_rate = 0;
-  	clockid_t clk_id = CLOCK_MONOTONIC;
+  	double total_time;
+ 	double ops_rate;
+ 	double compute_ops_rate;
+  	clockid_t clk_id = CLOCK_REALTIME;
     AFU afu(AFU_ACCEL_UUID);
 
         // Seed random generator with "now"
@@ -242,7 +242,7 @@ int main(int argc, char *argv[]) {
 				clock_gettime(clk_id, &start_compute);
 				afu.write(0x0400, 100);
 				clock_gettime(clk_id, &end_compute);
-				total_compute += (end_compute.tv_sec+end_compute.tv_nsec*10^-9-start_compute.tv_sec-start_compute.tv_nsec*10^-9);
+				total_compute += (end_compute.tv_sec+end_compute.tv_nsec*pow(10,-9)-start_compute.tv_sec-start_compute.tv_nsec*pow(10,-9));
 			}
 
 			// Push each value of B.
@@ -278,9 +278,9 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	clock_gettime(clk_id, &end );
-	total_time = end.tv_sec+end.tv_nsec*10^-9-start.tv_sec-start.tv_nsec*10^-9;
-	ops_rate = 2*DIM_FULL^3/total_time;
-	compute_ops_rate = 2*DIM_FULL^3/total_compute;
+	total_time = end.tv_sec+end.tv_nsec*pow(10,-9)-start.tv_sec-start.tv_nsec*pow(10,-9);
+	ops_rate = 2*pow(DIM_FULL,3)/total_time;
+	compute_ops_rate = 2*pow(DIM_FULL,3)/total_compute;
 
 	// Compare.
 	fprintf(stdout, "Calculation finished. Testing values...\n");
@@ -298,7 +298,7 @@ int main(int argc, char *argv[]) {
 	fprintf(stdout, "All tests passed. No errors detected.\n");
 
 
-	fprintf(stdout, "total time: %d. ops_rate: %d. compute_ops_rate: %d\n",total_time,ops_rate,compute_ops_rate);
+	fprintf(stdout, "total time: %f. total_compute: %f.ops_rate: %f. compute_ops_rate: %f\n",total_time, total_compute,ops_rate,compute_ops_rate);
 
 	return 0;    
   }
