@@ -266,10 +266,10 @@ int main(int argc, char *argv[]) {
 			}
 
 						// loading 0s to C
-			for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
-				send_row_C(c_clear, c_zero, afu);
-			}
-			
+			//for(ptrdiff_t c_clear = 0; c_clear < DIM; c_clear++){
+			//	send_row_C(c_clear, c_zero, afu);
+			//}
+
 		}
 	}
 
