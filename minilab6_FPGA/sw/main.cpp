@@ -238,7 +238,7 @@ int main(int argc, char *argv[]) {
 						A_row[cnt] = A_vals[BLK_r*DIM+a_r][k*DIM+a_r];
 					}
 					//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
-					send_row_A(a_r, A_row, afu);
+					send_row_A(a_r, &(A_vals[BLK_r*DIM+a_r][k*DIM]), afu);
 				}
 			}
 
@@ -251,7 +251,7 @@ int main(int argc, char *argv[]) {
 						B_row[cnt] = B_vals[k*DIM+b_r][BLK_c*DIM];
 					}
 					//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
-					send_row_B(b_r, B_row, afu);
+					send_row_B(b_r, &(B_vals[k+b_r][BLK_c*DIM]), afu);
 				}
 			}
 			// Calculate
@@ -265,7 +265,7 @@ int main(int argc, char *argv[]) {
 
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				unpack_from_C(c_r, output_row, afu);
+				unpack_from_C(c_r, &(output[BLK_r*DIM+c_r][BLK_c*DIM]), afu);
 				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				for(int cnt = 0; cnt < DIM; cnt++){
 					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
