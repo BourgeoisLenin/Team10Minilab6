@@ -223,10 +223,10 @@ int main(int argc, char *argv[]) {
 			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				for(int cnt = 0; cnt < DIM; cnt++){
+				/*for(int cnt = 0; cnt < DIM; cnt++){
 					output_row[cnt] = output[BLK_r*DIM+c_r][BLK_c*DIM+cnt];
-				}
-				send_row_C(c_r,&(output[BLK_r*DIM+c_r][BLK_c*DIM]),afu);
+				}*/
+				//send_row_C(c_r,&(output[BLK_r*DIM+c_r][BLK_c*DIM]),afu);
 			}
 
 			// Write each value of A down.
@@ -234,9 +234,9 @@ int main(int argc, char *argv[]) {
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 				{
-					for(int cnt = 0; cnt < DIM; cnt++){
+					/*for(int cnt = 0; cnt < DIM; cnt++){
 						A_row[cnt] = A_vals[BLK_r*DIM+a_r][k*DIM+a_r];
-					}
+					}*/
 					//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
 					send_row_A(a_r, &(A_vals[BLK_r*DIM+a_r][k*DIM]), afu);
 				}
@@ -247,11 +247,11 @@ int main(int argc, char *argv[]) {
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 				{
-					for(int cnt = 0; cnt < DIM; cnt++){
+					/*for(int cnt = 0; cnt < DIM; cnt++){
 						B_row[cnt] = B_vals[k*DIM+b_r][BLK_c*DIM];
-					}
+					}*/
 					//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
-					send_row_B(b_r, &(B_vals[k+b_r][BLK_c*DIM]), afu);
+					send_row_B(b_r, &(B_vals[k*DIM+b_r][BLK_c*DIM]), afu);
 				}
 			}
 			// Calculate
@@ -267,9 +267,9 @@ int main(int argc, char *argv[]) {
 			{
 				unpack_from_C(c_r, &(output[BLK_r*DIM+c_r][BLK_c*DIM]), afu);
 				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
-				for(int cnt = 0; cnt < DIM; cnt++){
+				/*for(int cnt = 0; cnt < DIM; cnt++){
 					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
-				}
+				}*/
 				//fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
 
 			}
