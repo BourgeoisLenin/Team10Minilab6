@@ -226,7 +226,7 @@ int main(int argc, char *argv[]) {
 				for(int cnt = 0; cnt < DIM; cnt++){
 					output_row[cnt] = output[BLK_r*DIM+c_r][BLK_c*DIM+cnt];
 				}
-				send_row_C(c_r,output_row,afu);
+				send_row_C(c_r,&output[BLK_r*DIM+c_r][BLK_c*DIM]],afu);
 			}
 
 			// Write each value of A down.
