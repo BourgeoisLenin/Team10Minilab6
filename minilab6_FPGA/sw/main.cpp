@@ -65,6 +65,7 @@ C_TYPE output_reference[DIM][DIM];
 AB_TYPE A_row[8];
 AB_TYPE B_row[8];
 C_TYPE output_row[8];
+C_TYPE c_zero[8] = {0,0,0,0,0,0,0,0};
 
 // Reflect Endian
 template<int width, class BT> BT ref_end(BT in)
@@ -218,6 +219,11 @@ int main(int argc, char *argv[]) {
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM/8;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM/8;BLK_c++){
 			// Now try it with the AFU.
+
+			// loading 0s to C
+			for(ptrdiff_t c_clear = 0; c_clear < 8; c_clear++){
+				send_row_C(c_clear, c_zero, afu);
+			}
 
 			// Write each value of A down.
 			fprintf(stdout, "Loading A into AFU...\n");
