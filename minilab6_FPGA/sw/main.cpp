@@ -259,9 +259,8 @@ int main(int argc, char *argv[]) {
 
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				unpack_from_C(c_r, output_row, afu);
-				//fprintf(output_row[0],"here!\n");
+				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				for(int cnt = 0; cnt < 8; cnt++){
 					output[BLK_r*8+c_r][BLK_c*8+cnt] = output_row[cnt];
 				}
