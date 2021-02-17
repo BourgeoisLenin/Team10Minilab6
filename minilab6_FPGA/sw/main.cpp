@@ -230,7 +230,7 @@ int main(int argc, char *argv[]) {
 			}
 
 			// Write each value of A down.
-			fprintf(stdout, "Loading A into AFU...\n");
+			
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 				{
@@ -238,12 +238,15 @@ int main(int argc, char *argv[]) {
 						A_row[cnt] = A_vals[BLK_r*DIM+a_r][k*DIM+a_r];
 					}*/
 					//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
+					fprintf(stdout, "Loading A into AFU...\n");
 					send_row_A(a_r, &(A_vals[BLK_r+a_r][k]), afu);
+					fprintf(stdout, "Loading B into AFU...\n");
+					send_row_B(a_r, &(B_vals[k+a_r][BLK_c]), afu);
 				}
+				afu.write(0x0400, 100);
 			}
 
 			// Push each value of B.
-			fprintf(stdout, "Loading B into AFU...\n");
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 				{
@@ -256,7 +259,6 @@ int main(int argc, char *argv[]) {
 			}
 			// Calculate
 			fprintf(stdout, "Performing Calculation...\n");
-			afu.write(0x0400, 100);
 			// Do we have to sleep?
 		//	usleep(1000*1000);
 
