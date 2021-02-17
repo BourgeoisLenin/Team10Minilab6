@@ -28,6 +28,7 @@
 #include <cstdio>
 #include <climits>
 #include <unistd.h>
+#include <time.h>
 
 #include <opae/utils.h>
 
@@ -62,11 +63,6 @@ AB_TYPE B_vals[DIM_FULL][DIM_FULL];
 C_TYPE output[DIM_FULL][DIM_FULL];
 C_TYPE output_reference[DIM_FULL][DIM_FULL];
 
-//NEW
-AB_TYPE A_row[DIM];
-AB_TYPE B_row[DIM];
-C_TYPE output_row[DIM];
-C_TYPE c_zero[8] = {0,0,0,0,0,0,0,0};
 
 // Reflect Endian
 template<int width, class BT> BT ref_end(BT in)
@@ -181,6 +177,14 @@ int main(int argc, char *argv[]) {
     // Create an AFU object to provide basic services for the FPGA. The 
     // constructor searchers available FPGAs for one with an AFU with the
     // the specified ID
+	 int start = 0;
+ 	int start_compute = 0;
+ 	int end_compute = 0 ;
+ 	int total_compute = 0;
+ 	int end = 0;
+ 	int total_time = 0;
+ 	int ops_rate = 0;
+ 	int compute_ops_rate = 0;
     AFU afu(AFU_ACCEL_UUID);
 
         // Seed random generator with "now"
@@ -216,17 +220,13 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
-
+	clock_gettime(start);
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM_FULL/DIM;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM_FULL/DIM;BLK_c++){
 			// Now try it with the AFU.
-			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				/*for(int cnt = 0; cnt < DIM; cnt++){
-					output_row[cnt] = output[BLK_r*DIM+c_r][BLK_c*DIM+cnt];
-				}*/
-				send_row_C(c_r,&(output[BLK_r*8+c_r][BLK_c*8]),afu);
+				send_row_C(c_r,&(output[BLK_r*DIM+c_r][BLK_c*DIM]),afu);
 			}
 
 			// Write each value of A down.
@@ -235,14 +235,13 @@ int main(int argc, char *argv[]) {
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 				{
-					/*for(int cnt = 0; cnt < DIM; cnt++){
-						A_row[cnt] = A_vals[BLK_r*DIM+a_r][k*DIM+a_r];
-					}*/
-					//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
-					send_row_A(a_r, &(A_vals[BLK_r*8+a_r][k*8]), afu);
-					send_row_B(a_r, &(B_vals[k*8+a_r][BLK_c*8]), afu);
+					send_row_A(a_r, &(A_vals[BLK_r*DIM+a_r][k*DIM]), afu);
+					send_row_B(a_r, &(B_vals[k*DIM+a_r][BLK_c*DIM]), afu);
 				}
+				clock_gettime(start_compute);
 				afu.write(0x0400, 100);
+				clock_gettime(end_compute);
+				total_compute += (end_compute-start_compute);
 			}
 
 			// Push each value of B.
@@ -253,7 +252,7 @@ int main(int argc, char *argv[]) {
 						B_row[cnt] = B_vals[k*DIM+b_r][BLK_c*DIM];
 					}*/
 					//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
-					send_row_B(b_r, &(B_vals[k*8+b_r][BLK_c*8]), afu);
+					send_row_B(b_r, &(B_vals[k*DIM+b_r][BLK_c*DIM]), afu);
 				}
 			}
 			// Calculate
@@ -266,7 +265,7 @@ int main(int argc, char *argv[]) {
 
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				unpack_from_C(c_r, &(output[BLK_r*8+c_r][BLK_c*8]), afu);
+				unpack_from_C(c_r, &(output[BLK_r*DIM+c_r][BLK_c*DIM]), afu);
 				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				/*for(int cnt = 0; cnt < DIM; cnt++){
 					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
@@ -277,6 +276,10 @@ int main(int argc, char *argv[]) {
 
 		}
 	}
+	clock_gettime(end);
+	total_time = end -start;
+	ops_rate = 2*DIM_FULL^3/total_time;
+	compute_ops_rate = 2*DIM_FULL^3/total_compute;
 
 	// Compare.
 	fprintf(stdout, "Calculation finished. Testing values...\n");
@@ -292,6 +295,9 @@ int main(int argc, char *argv[]) {
 	}
 
 	fprintf(stdout, "All tests passed. No errors detected.\n");
+
+
+	fprintf(stdout, "total time: %d. ops_rate: %d. compute_ops_rate: %d\n",total_time,ops_rate,compute_ops_rate);
 
 	return 0;    
   }
