@@ -52,7 +52,7 @@ using namespace std;
 
 typedef int8_t AB_TYPE;
 typedef int16_t C_TYPE;
-#define DIM 8
+#define DIM 16
 #define MAX_VAL _UI16_MAX
 #define DEBUG true
 
@@ -219,7 +219,7 @@ int main(int argc, char *argv[]) {
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM/8;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM/8;BLK_c++){
 			// Now try it with the AFU.
-
+			fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 			// loading 0s to C
 			for(ptrdiff_t c_clear = 0; c_clear < 8; c_clear++){
 				send_row_C(c_clear, c_zero, afu);
@@ -258,9 +258,14 @@ int main(int argc, char *argv[]) {
 			{
 
 				unpack_from_C(c_r, output_row, afu);
+				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
+			
 				for(int cnt = 0; cnt < 8; cnt++){
 					output[BLK_r*8+c_r][BLK_c*8+cnt] = output_row[cnt];
 				}
+			
+				fprintf(stdout,"output here! %hx \n",output[BLK_r*8+c_r][BLK_c]);
+			
 			}
 		}
 	}
