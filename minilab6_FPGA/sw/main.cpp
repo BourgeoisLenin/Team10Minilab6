@@ -223,7 +223,10 @@ int main(int argc, char *argv[]) {
 			//fprintf(stdout, "Block row:%td, Block col:%td\n",BLK_r,BLK_c);
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				send_row_C(c_r,output[BLK_r+c_r][BLK_c],afu);
+				for(int cnt = 0; cnt < DIM; cnt++){
+					output_row[cnt] = output[BLK_r*DIM+c_r][BLK_c*DIM_cnt];
+				}
+				send_row_C(c_r,output_row,afu);
 			}
 
 			// Write each value of A down.
