@@ -231,7 +231,7 @@ int main(int argc, char *argv[]) {
 
 			// Write each value of A down.
 			fprintf(stdout, "Loading A into AFU...\n");
-			for(ptrdiff_t k = 0; DIM_FULL/DIM;k++){
+			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 				{
 					for(int cnt = 0; cnt < DIM; cnt++){
@@ -244,7 +244,7 @@ int main(int argc, char *argv[]) {
 
 			// Push each value of B.
 			fprintf(stdout, "Loading B into AFU...\n");
-			for(ptrdiff_t k = 0; DIM_FULL/DIM;k++){
+			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
 				{
 					for(int cnt = 0; cnt < DIM; cnt++){
