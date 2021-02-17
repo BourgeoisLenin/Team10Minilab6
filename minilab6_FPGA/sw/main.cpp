@@ -185,6 +185,8 @@ int main(int argc, char *argv[]) {
  	int total_time = 0;
  	int ops_rate = 0;
  	int compute_ops_rate = 0;
+	struct timespec tp;
+  	clockid_t clk_id = CLOCK_MONOTONIC;
     AFU afu(AFU_ACCEL_UUID);
 
         // Seed random generator with "now"
@@ -220,7 +222,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
-	clock_gettime(start);
+	start = clock_gettime(clk_id, &tp);
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM_FULL/DIM;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM_FULL/DIM;BLK_c++){
 			// Now try it with the AFU.
@@ -238,9 +240,9 @@ int main(int argc, char *argv[]) {
 					send_row_A(a_r, &(A_vals[BLK_r*DIM+a_r][k*DIM]), afu);
 					send_row_B(a_r, &(B_vals[k*DIM+a_r][BLK_c*DIM]), afu);
 				}
-				clock_gettime(start_compute);
+				start_compute = clock_gettime(clk_id, &tp);
 				afu.write(0x0400, 100);
-				clock_gettime(end_compute);
+				end_compute = clock_gettime(clk_id, &tp);
 				total_compute += (end_compute-start_compute);
 			}
 
@@ -276,7 +278,7 @@ int main(int argc, char *argv[]) {
 
 		}
 	}
-	clock_gettime(end);
+	end = clock_gettime(clk_id, &tp);
 	total_time = end -start;
 	ops_rate = 2*DIM_FULL^3/total_time;
 	compute_ops_rate = 2*DIM_FULL^3/total_compute;
