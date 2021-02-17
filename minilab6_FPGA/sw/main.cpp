@@ -223,12 +223,15 @@ int main(int argc, char *argv[]) {
 
 			// loading 0s to C
 			for(ptrdiff_t c_clear = 0; c_clear < 8; c_clear++){
+				for (int i = 0; i < 8;i++){
+					c_zero[i] = 0;
+				}
 				send_row_C(c_clear, c_zero, afu);
 			}
 
 			// Write each value of A down.
 			fprintf(stdout, "Loading A into AFU...\n");
-			for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
+			for(ptrdiff_t a_r = 0; a_r < 8; ++a_r)
 			{
 				for(int cnt = 0; cnt < 8; cnt++){
 					A_row[cnt] = A_vals[BLK_r*8+a_r][BLK_c*8+cnt];
@@ -239,7 +242,7 @@ int main(int argc, char *argv[]) {
 
 			// Push each value of B.
 			fprintf(stdout, "Loading B into AFU...\n");
-			for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
+			for(ptrdiff_t b_r = 0; b_r < 8; ++b_r)
 			{
 				for(int cnt = 0; cnt < 8; cnt++){
 					B_row[cnt] = B_vals[BLK_r*8+b_r][BLK_c*8+cnt];
@@ -257,7 +260,7 @@ int main(int argc, char *argv[]) {
 			// Read Values.
 			fprintf(stdout, "Reading Output from C...\n");
 
-			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
+			for(ptrdiff_t c_r = 0; c_r < 8; ++c_r)
 			{
 				unpack_from_C(c_r, output_row, afu);
 				fprintf(stdout,"output_row here! %hx \n",output_row[0]);
