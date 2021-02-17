@@ -61,6 +61,11 @@ AB_TYPE B_vals[DIM][DIM];
 C_TYPE output[DIM][DIM];
 C_TYPE output_reference[DIM][DIM];
 
+//NEW
+AB_TYPE A_row[8];
+AB_TYPE B_row[8];
+C_TYPE output_row[8];
+
 // Reflect Endian
 template<int width, class BT> BT ref_end(BT in)
 {
@@ -210,35 +215,48 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	for(ptrdiff_t BLK = 0; BLK<DIM/8;BLK++){
-		// Now try it with the AFU.
+	for(ptrdiff_t BLK_r = 0; BLK_r<DIM/8;BLK_r++){
+		for(ptrdiff_t BLK_c = 0; BLK_c<DIM/8;BLK_c++){
+			// Now try it with the AFU.
 
-		// Write each value of A down.
-		fprintf(stdout, "Loading A into AFU...\n");
-		for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
-		{
-			send_row_A(a_r, A_vals[a_r][(BLK*8+a_r):0], afu);
-		}
+			// Write each value of A down.
+			fprintf(stdout, "Loading A into AFU...\n");
+			for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
+			{
+				for(int cnt = 0; cnt < 8; cnt++){
+					A_row[cnt] = A_vals[BLK_r*8][BLK_c*8+cnt];
+				}
+				send_row_A(a_r, A_row, afu);
+			}
 
-		// Push each value of B.
-		fprintf(stdout, "Loading B into AFU...\n");
-		for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
-		{
-			send_row_B(b_r, B_vals[b_r][(BLK*8+b_r):0], afu);
-		}
+			// Push each value of B.
+			fprintf(stdout, "Loading B into AFU...\n");
+			for(ptrdiff_t b_r = 0; b_r < DIM; ++b_r)
+			{
+				for(int cnt = 0; cnt < 8; cnt++){
+					B_row[cnt] = B_vals[BLK_r*8][BLK_c*8+cnt];
+				}
+				send_row_B(b_r, B_row, afu);
+			}
 
-		// Calculate
-		fprintf(stdout, "Performing Calculation...\n");
-		afu.write(0x0400, 100);
-		// Do we have to sleep?
-	//	usleep(1000*1000);
+			// Calculate
+			fprintf(stdout, "Performing Calculation...\n");
+			afu.write(0x0400, 100);
+			// Do we have to sleep?
+		//	usleep(1000*1000);
 
-		// Read Values.
-		fprintf(stdout, "Reading Output from C...\n");
+			// Read Values.
+			fprintf(stdout, "Reading Output from C...\n");
 
-		for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
-		{
-			unpack_from_C(c_r, output[c_r][(BLK*8+c_r):0], afu);
+			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
+			{
+
+				unpack_from_C(c_r, output_row, afu);
+				output[BLK_r*8+c_r]
+				for(int cnt = 0; cnt < 8; cnt++){
+					output[BLK_r*8+c_r][BLK_c*8+cnt] =output_row[cnt];
+				}
+			}
 		}
 	}
 
