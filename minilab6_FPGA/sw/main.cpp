@@ -240,7 +240,7 @@ int main(int argc, char *argv[]) {
 			fprintf(stdout, "Performing Calculation...\n");
 			afu.write(0x0400, 100);
 			// Do we have to sleep?
-		//	usleep(1000*1000);
+			usleep(1000*1000);
 
 			// Read Values.
 			fprintf(stdout, "Reading Output from C...\n");
@@ -256,7 +256,7 @@ int main(int argc, char *argv[]) {
 			{
 				for(int c = 0; c < DIM; ++c)
 				{
-					fprintf(stdout, "row: %d, col: %d | got: %hx, expected %hx", r, c, output[r][c], output_reference[r][c]);
+					fprintf(stdout, "row: %d, col: %d | got: %hx, expected %hx", r, c, output[BLK_r][BLK_c][r][c], output_reference[BLK_r][BLK_c][r][c]);
 					fflush(stdout);
 					assert(output[BLK_r][BLK_c][r][c] == output_reference[BLK_r][BLK_c][r][c]);
 					fprintf(stdout, " [OK]\n");
