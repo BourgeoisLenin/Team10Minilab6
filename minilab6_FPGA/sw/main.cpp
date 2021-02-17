@@ -226,11 +226,12 @@ int main(int argc, char *argv[]) {
 				/*for(int cnt = 0; cnt < DIM; cnt++){
 					output_row[cnt] = output[BLK_r*DIM+c_r][BLK_c*DIM+cnt];
 				}*/
-				send_row_C(c_r,&(output[BLK_r+c_r][BLK_c]),afu);
+				send_row_C(c_r,&(output[BLK_r*8+c_r][BLK_c*8]),afu);
 			}
 
 			// Write each value of A down.
 			
+			fprintf(stdout, "Loading A and B into AFU...\n");
 			for(ptrdiff_t k = 0; k<DIM_FULL/DIM;k++){
 				for(ptrdiff_t a_r = 0; a_r < DIM; ++a_r)
 				{
@@ -238,10 +239,8 @@ int main(int argc, char *argv[]) {
 						A_row[cnt] = A_vals[BLK_r*DIM+a_r][k*DIM+a_r];
 					}*/
 					//fprintf(stdout,"A_row here! %hx \n",A_row[0]);
-					fprintf(stdout, "Loading A into AFU...\n");
-					send_row_A(a_r, &(A_vals[BLK_r+a_r][k]), afu);
-					fprintf(stdout, "Loading B into AFU...\n");
-					send_row_B(a_r, &(B_vals[k+a_r][BLK_c]), afu);
+					send_row_A(a_r, &(A_vals[BLK_r*8+a_r][k*8]), afu);
+					send_row_B(a_r, &(B_vals[k*8+a_r][BLK_c*8]), afu);
 				}
 				afu.write(0x0400, 100);
 			}
@@ -254,7 +253,7 @@ int main(int argc, char *argv[]) {
 						B_row[cnt] = B_vals[k*DIM+b_r][BLK_c*DIM];
 					}*/
 					//fprintf(stdout,"B_row here! %hx \n",B_row[0]);
-					send_row_B(b_r, &(B_vals[k+b_r][BLK_c]), afu);
+					send_row_B(b_r, &(B_vals[k*8+b_r][BLK_c*8]), afu);
 				}
 			}
 			// Calculate
@@ -267,7 +266,7 @@ int main(int argc, char *argv[]) {
 
 			for(ptrdiff_t c_r = 0; c_r < DIM; ++c_r)
 			{
-				unpack_from_C(c_r, &(output[BLK_r+c_r][BLK_c]), afu);
+				unpack_from_C(c_r, &(output[BLK_r*8+c_r][BLK_c*8]), afu);
 				//fprintf(stdout,"output_row here! %hx \n",output_row[0]);
 				/*for(int cnt = 0; cnt < DIM; cnt++){
 					output[BLK_r*DIM+c_r][BLK_c*DIM+cnt] = output_row[cnt];
