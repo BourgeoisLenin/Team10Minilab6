@@ -177,15 +177,14 @@ int main(int argc, char *argv[]) {
     // Create an AFU object to provide basic services for the FPGA. The 
     // constructor searchers available FPGAs for one with an AFU with the
     // the specified ID
-	 int start = 0;
- 	int start_compute = 0;
- 	int end_compute = 0 ;
+	struct timespec start;
+ 	struct timespec start_compute;
+ 	struct timespec end_compute;
  	int total_compute = 0;
- 	int end = 0;
+ 	struct timespec end;
  	int total_time = 0;
  	int ops_rate = 0;
  	int compute_ops_rate = 0;
-	struct timespec tp;
   	clockid_t clk_id = CLOCK_MONOTONIC;
     AFU afu(AFU_ACCEL_UUID);
 
@@ -222,7 +221,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
-	start = clock_gettime(clk_id, &tp);
+	clock_gettime(clk_id, &start);
 	for(ptrdiff_t BLK_r = 0; BLK_r<DIM_FULL/DIM;BLK_r++){
 		for(ptrdiff_t BLK_c = 0; BLK_c<DIM_FULL/DIM;BLK_c++){
 			// Now try it with the AFU.
@@ -240,10 +239,10 @@ int main(int argc, char *argv[]) {
 					send_row_A(a_r, &(A_vals[BLK_r*DIM+a_r][k*DIM]), afu);
 					send_row_B(a_r, &(B_vals[k*DIM+a_r][BLK_c*DIM]), afu);
 				}
-				start_compute = clock_gettime(clk_id, &tp);
+				clock_gettime(clk_id, &start_compute);
 				afu.write(0x0400, 100);
-				end_compute = clock_gettime(clk_id, &tp);
-				total_compute += (end_compute-start_compute);
+				clock_gettime(clk_id, &end_compute);
+				total_compute += (end_compute.tv_sec+end_compute.tv_nsec*10^-9-start_compute.tv_sec-start_compute.tv_nsec*10^-9);
 			}
 
 			// Push each value of B.
@@ -278,8 +277,8 @@ int main(int argc, char *argv[]) {
 
 		}
 	}
-	end = clock_gettime(clk_id, &tp);
-	total_time = end -start;
+	clock_gettime(clk_id, &end );
+	total_time = end.tv_sec+end.tv_nsec*10^-9-start.tv_sec-start.tv_nsec*10^-9;
 	ops_rate = 2*DIM_FULL^3/total_time;
 	compute_ops_rate = 2*DIM_FULL^3/total_compute;
 
